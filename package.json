@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-p5-starter",
+  "version": "0.0.1",
+  "description": "Gatsby starter website template for use with p5.js",
+  "author": "Wendy Dherin",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "gatsby",
+    "p5js",
+    "react",
+    "example",
+    "p5.js",
+    "starter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doubledherin/gatsby-p5-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doubledherin/gatsby-p5-starter/issues"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "clean": "gatsby clean",
+    "reset": "rm -rf .cache/ public/ node_modules/ package-lock.json",
+    "prep": "rm -rf .cache/ public/ node_modules/ && npm ci",
+    "develop": "DEBUG=gatsby* gatsby develop --verbose",
+    "build": "DEBUG=gatsby* gatsby build --verbose",
+    "serve": "DEBUG=gatsby* gatsby serve --verbose",
+    "test": "echo \"Error: no test specified -- https://gatsby.app/unit-testing/\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "gatsby": "^2.15.28",
+    "p5": "^0.9.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0",
+    "react-helmet": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
