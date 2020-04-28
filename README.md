@@ -14,6 +14,8 @@ This is a Gatsby starter that integrates with p5.js.
 - [p5.js](https://p5js.org/)
 - [Emotion CSS Library](https://emotion.sh/docs/introduction)
 
+Note that this does not use `react-p5-wrapper` -- no need.
+
 ## 🚀 Getting Started
 
 0. **Make sure you have the basics.**
