@@ -1,46 +1,62 @@
-import p5 from './p5.min';
-
 export default function sketch(p) {
-  console.log("P is: ", p);
-  let w;
-  let canvas;
+  // ~~~~~~ Initialize variables ~~~~~~~~~
+  let numberOfVertices = 20
+  let friction = 0.01
+  let shapeSize = (p.windowWidth * p.windowHeight) / 19000
+  let positionX
+  let positionY
+  let x = []
+  let y = []
+    
+  // ~~~~~~ React lifecycle methods ~~~~~~
+  p.preload = () => {
 
-  function randomInt(max) {
-    return p.floor(p.random(max + 1));
   }
 
-  class Walker {
-    constructor() {
-      this.p5 = new p5()
-      this.pos = p.createVector(p.width / 2, p.height / 2);
-      this.vel = p.createVector(0, 0);
-      this.update = () => {
-        const mouse = p.createVector(this.p5.mouseX, this.p5.mouseY);
-        this.acc = p5.Vector.sub(mouse, this.pos);
-        this.acc.setMag(0.05);
-        this.vel.add(this.acc);
-        this.pos.add(this.vel);
-      };
-      this.display = () => {
-        p.fill(randomInt(255), randomInt(255), randomInt(255));
-        p.ellipse(this.pos.x, this.pos.y, 48, 48);
-      };
-    }
-  }
-  p.keyTyped = () => {
-    if (p.key === 's') {
-      p.saveCanvas('snapshot', 'png')
-    }
-  };
-
+  // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    canvas = p.createCanvas(3 * 640, 3 * 360);
-    p.background(randomInt(255), randomInt(255), randomInt(255));
-    w = new Walker();
-  };
+    p.createCanvas(p.windowWidth, p.windowHeight)
+    positionX = p.random(0, p.width)
+    positionY = p.random(0, p.height)
+    let angle = p.radians(360 / numberOfVertices)
+    for (let i = 0; i < numberOfVertices; i++) {
+      x.push(p.cos(angle * i) * shapeSize)
+      y.push(p.sin(angle * i) * shapeSize)
+    }
+    p.stroke(255, 100, 0, 70)
+    p.background(0)
+    p.noFill()
+  }
 
+  // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    w.update();
-    w.display();
-  };
+    p.beginShape()
+      p.curveVertex(positionX + x[0], positionY + y[0])
+      p.curveVertex(positionX + x[numberOfVertices - 1], positionY +y[numberOfVertices - 1])
+      for (let i = 0; i < numberOfVertices; i++) {
+        p.curveVertex(positionX + x[i], positionY + y[i])
+      }
+      p.curveVertex(positionX + x[1], positionY + y[1])
+    p.endShape()
+
+    positionX += (p.mouseX - positionX) * friction
+    positionY += (p.mouseY - positionY) * friction
+
+  }
+
+  p.mousePressed = () => {
+    positionX = p.mouseX
+    positionY = p.mouseY
+    setVertices()
+  }
+
+  // ~~~~~~ Helper functions ~~~~~~~~~
+  function setVertices() {
+    for (let i = 0; i < numberOfVertices; i++) {
+      x[i] += p.random(-1, 1)
+      y[i] += p.random(-1, 1)
+    }
+  }
+  // ~~~~~~ Classes ~~~~~~~~~~~~
+  
 }

@@ -11,4 +11,4 @@ module.exports = {
   get copyright() {
     return `Copyright \u00A9 ${new Date().getFullYear()} ${this.siteAuthor}`;
   }, // Returns copyright string with year of last build
-};
+}
