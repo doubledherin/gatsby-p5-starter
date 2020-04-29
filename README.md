@@ -47,7 +47,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
     gatsby develop
     ```
 
-    You'll see that Git is already initialized in your repo. To push to Github, create a new repository on Github and then add it as the origin remote locally with `git remote add origin <url-of-your-github-repo>`. 
+    You'll see that Git is already initialized in your repo. To push to Github, **create a new repository on Github** and then add it as the origin remote locally with `git remote add origin <url-of-your-github-repo>`. 
 
     Make your first commit and push with 
     ```sh
