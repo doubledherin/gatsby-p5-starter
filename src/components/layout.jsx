@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-const StyledLayout = styled.div`
-`
+import Header from './header'
 
-const StyledHeader = styled.div`
-  color: white;
+const StyledLayout = styled.div`
   background-color: black;
 `
 
@@ -15,7 +13,7 @@ const Container = styled.div``
 const Layout = ({ children }) => {
   return (
     <StyledLayout>
-      <StyledHeader>Hi!</StyledHeader>
+      <Header />
       <Container>{children}</Container>
     </StyledLayout>
   )
