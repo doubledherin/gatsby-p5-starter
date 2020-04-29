@@ -3,29 +3,18 @@ import styled from '@emotion/styled'
 import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
-  a {
-    color: white;
-  }
-  ul {
-    listStyle: none;
-    float: right;
-  }
-  li {
-    display: inline-block;
-    marginRight: 1rem;
-    color: white;
+  .menu.item {
+    padding: 0px 10px 0px 0px;
   }
 `
 
 const Header = () => {
   return (
-    <StyledHeader>
-      <Link to="/"><h3>[Your name and logo here]</h3></Link>
-      <ul>
-        <Link to="/gallery/">Gallery</Link>
-        <Link to="/about/">About</Link>
-        <Link to="/contact/">Contact</Link>
-      </ul>
+    <StyledHeader className="header">
+        <Link className="menu item" to="/">Home</Link>
+        <Link className="menu item" to="/gallery/">Gallery</Link>
+        <Link className="menu item" to="/about/">About</Link>
+        <Link className="menu item" to="/contact/">Contact</Link>
     </StyledHeader>
   )
 }

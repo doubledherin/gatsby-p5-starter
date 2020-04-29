@@ -1,24 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { Global, css } from '@emotion/core'
 
 import Header from './header'
 
-const StyledLayout = styled.div`
-  html, body {
-    background: black;
-    
-  a {
-    color: white;
-  }
-`
-
 const Layout = ({ children }) => {
   return (
-    <StyledLayout>
+    <div>
+      <Global
+      styles={css`
+        body {
+          background: black;
+          color: white;
+        }
+        header {
+          background: pink;
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+        a {
+          color: white;
+        }
+      `}
+      />
       <Header />
-      {children}
-    </StyledLayout>
+        {children}
+    </div>
   )
 }
 
