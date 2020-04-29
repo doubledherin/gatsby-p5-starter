@@ -81,8 +81,8 @@ You have 2 choices for Github deployment:
 4. If you'd like, remove the `pathPrefix` entry in the `gatsby-config.js` file, as it's only needed for deployment to a specific path.
 
 ### Deployment to a github.io path
-1. Create a local `gh-pages` branch and push it to Github. Also select a Jekyll theme, even though we're not using one.
-2. In your Github repo, click Settings, scroll down to Github Pages, and select `gh-pages` for your source page.
+1. Create a local `gh-pages` branch and push it to Github. 
+2. In your Github repo, click Settings, scroll down to Github Pages, and select `gh-pages` for your source page. Also select a Jekyll theme, even though we're not using one.
 3. In the `gatsby-config.js` file, change the `pathPrefix` entry to be the name of your repo. (By default, it's set to `/my-portfolio`.)
 4. In your `package.json`, under `scripts`, add a new entry: `"deploy": "gatsby build --prefix-paths && gh-pages -d public"`
 5. Run `npm run deploy` and you should see the site at `<username>.github.io/<pathPrefix>`.
