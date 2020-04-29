@@ -5,16 +5,19 @@ import styled from '@emotion/styled'
 import Header from './header'
 
 const StyledLayout = styled.div`
-  background-color: black;
+  html, body {
+    background: black;
+    
+  a {
+    color: white;
+  }
 `
-
-const Container = styled.div``
 
 const Layout = ({ children }) => {
   return (
     <StyledLayout>
       <Header />
-      <Container>{children}</Container>
+      {children}
     </StyledLayout>
   )
 }

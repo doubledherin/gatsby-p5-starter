@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"I1v/":function(n,c,e){"use strict";e.r(c);e("q1tI");var t=e("qKvR");c.default=function(){return Object(t.c)("div",null,Object(t.c)("p",null,"Here's a gallery of cool things"))}}}]);
+//# sourceMappingURL=component---src-pages-gallery-jsx-28a5312224e79371ddcd.js.map
