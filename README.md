@@ -39,7 +39,16 @@ Note that this does not use `react-p5-wrapper` -- no need.
     This will create a new Gatsby project based on a clone of this repo.
 
 2.  **Make some config changes.**
-    In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
+
+    Navigate into your new site’s directory
+
+    ```sh
+    cd <your-project-name>
+    ```
+
+    You'll see that Git is already initialized in your local repo.
+
+    In the repo's `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
     
     Also in the `config.js` file, under `siteUrl`, change `<your-username>` to be your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://<your-username>.github.io'`.
 
@@ -59,13 +68,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 4.  **Set up your Github repo.**
 
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd <your-project-name>
-    ```
-
-    You'll see that Git is already initialized in your local repo. To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
+    To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
     
     ```sh
     git remote add origin <url-of-your-github-repo>
