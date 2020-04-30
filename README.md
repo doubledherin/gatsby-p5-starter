@@ -89,11 +89,11 @@ git checkout -b gh-pages
 git push origin gh-pages
 git checkout master
 ```
-2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`). Also select a Jekyll theme, even though we're not using one.
+2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`).
 3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
 
 ### Option 2: Deployment to your github.io subdomain
-1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page. Also select a Jekyll theme, even though we're not using one.
+1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page.
 2. In your `package.json`, under `scripts`, change the entry for `"deploy"` by removing `--prefix-paths` and by adding `-b master` to the end. It should look like this: `"deploy": "gatsby build && gh-pages -d public -b master"`
 3. Run `npm run deploy` and  *a few minutes after the deploy completes*, you should see the site at `username.github.io`.
 4. If you'd like, remove the `pathPrefix` entry in the `gatsby-config.js` file, as it's only needed for deployment to a specific path.
