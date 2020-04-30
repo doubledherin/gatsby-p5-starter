@@ -89,7 +89,7 @@ git checkout -b gh-pages
 git push origin gh-pages
 git checkout master
 ```
-2. In your Github repo, click Settings, scroll down to Github Pages. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`). Also select a Jekyll theme, even though we're not using one.
+2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`). Also select a Jekyll theme, even though we're not using one.
 3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
 
 ### Option 2: Deployment to your github.io subdomain
