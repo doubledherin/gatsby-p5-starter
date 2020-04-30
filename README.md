@@ -38,21 +38,11 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     This will create a new Gatsby project based on a clone of this repo.
 
-2.  **Set up your Github repo.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd <your-project-name>
-    ```
-
-    You'll see that Git is already initialized in your local repo. To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
+2.  **Make some config changes.**
+    In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
     
-    ```sh
-    git remote add origin <url-of-your-github-repo>
-    git push -u origin master
-    ```
-    
+    Also in the `config.js` file, under `siteUrl`, change `<your-username>` to be your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://<your-username>.github.io'`.
+
 3.  **Fire it up!**
 
     ```sh
@@ -67,6 +57,21 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     Hot reloading is hot hot hot. 
 
+4.  **Set up your Github repo.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd <your-project-name>
+    ```
+
+    You'll see that Git is already initialized in your local repo. To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
+    
+    ```sh
+    git remote add origin <url-of-your-github-repo>
+    git push -u origin master
+    ```
+    
 ## 💫 Deployment to Github Pages
 
 You have 2 choices for Github deployment: 
@@ -76,9 +81,7 @@ You have 2 choices for Github deployment:
 ### Option 1: Deployment to a github.io path
 1. Create a local `gh-pages` branch and push it to Github. Then `cd` back to the `master` branch.
 2. In your Github repo, click Settings, scroll down to Github Pages, and select `gh-pages` for your source page. Also select a Jekyll theme, even though we're not using one.
-3. In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
-4. Also in the `config.js` file, under `siteUrl`, change `<your-username>` to be your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://<your-username>.github.io'`.
-5. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
+3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
 
 ### Option 2: Deployment to your github.io subdomain
 1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page. Also select a Jekyll theme, even though we're not using one.
