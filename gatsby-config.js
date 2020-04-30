@@ -11,4 +11,5 @@ module.exports = {
     settings: { ...config },
   },
   plugins: [`gatsby-plugin-emotion`],
+  pathPrefix
 }
