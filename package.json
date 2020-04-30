@@ -30,7 +30,8 @@
     "develop": "DEBUG=gatsby* gatsby develop --verbose",
     "build": "DEBUG=gatsby* gatsby build --verbose",
     "serve": "DEBUG=gatsby* gatsby serve --verbose",
-    "test": "echo \"Error: no test specified -- https://gatsby.app/unit-testing/\" && exit 1"
+    "test": "echo \"Error: no test specified -- https://gatsby.app/unit-testing/\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",

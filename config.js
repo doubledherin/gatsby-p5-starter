@@ -6,7 +6,7 @@ module.exports = {
   siteShortDescription: '',
   siteKeywords: 'comma, separated, list', // Replace this with your SEO keywords
   siteUrl: 'https://doubledherin.github.io', // Insert the protocol and canonical domain, without any pathPrefix
-  pathPrefix: '',
+  pathPrefix: '/my-gatsby-p5-site',
   siteLanguage: 'en',
   get copyright() {
     return `Copyright \u00A9 ${new Date().getFullYear()} ${this.siteAuthor}`;

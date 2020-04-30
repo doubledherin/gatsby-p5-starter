@@ -30,7 +30,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
     You'll need to install this node.js package globally, with `npm install -g gatsby-cli`. Once it's installed, view the available commands by running `gatsby --help`.
 
 1.  **Create a Gatsby site.**
-    Use the Gatsby CLI to create a new site, specifying the starter project.
+    *Don't just clone this repo.* Instead, use the Gatsby CLI to create a new site, specifying the starter project.
     
     ```sh
     gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter.git
