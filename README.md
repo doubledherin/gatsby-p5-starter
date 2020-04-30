@@ -27,7 +27,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
     If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
 
     ***Gatsby CLI***
-    You'll need to install this node.js package globally, with `npm install -g gatsby-cli`. Once it's installed, view the available commands by running `gatsby --help`.
+    You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
 1.  **Create a Gatsby site.**
     *Don't just clone this repo.* Instead, use the Gatsby CLI to create a new site, specifying the starter project.
