@@ -83,7 +83,13 @@ You have 2 choices for Github deployment:
 - Option 2: your github.io subdomain (e.g. `<username>.github.io`) 
 
 ### Option 1: Deployment to a github.io path
-1. Create a local `gh-pages` branch and push it to Github. 
+1. Create a local `gh-pages` branch and push it to Github
+```sh
+git checkout -b gh-pages
+git push origin gh-pages
+git checkout master
+```
+ 
 2. `cd` back to the `master` branch.
 3. In your Github repo, click Settings, scroll down to Github Pages. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`). Also select a Jekyll theme, even though we're not using one.
 4. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
