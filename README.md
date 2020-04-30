@@ -40,17 +40,11 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 2.  **Make some config changes.**
 
-    Navigate into your new site’s directory
+    `cd` into your repo's directory. You'll see that Git is already initialized.
 
-    ```sh
-    cd <your-project-name>
-    ```
-
-    You'll see that Git is already initialized in your local repo.
-
-    In the repo's `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
+    In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
     
-    Also in the `config.js` file, under `siteUrl`, change `<your-username>` to be your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://<your-username>.github.io'`.
+    Also change `siteUrl` to replace `<your-username>` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://<your-username>.github.io'`.
 
 3.  **Fire it up!**
 
