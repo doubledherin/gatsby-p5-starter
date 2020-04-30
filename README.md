@@ -66,7 +66,14 @@ Note that this does not use `react-p5-wrapper` -- no need.
     
     ```sh
     git remote add origin <url-of-your-github-repo>
-    git push -u origin master
+    ```
+
+    Commit your config changes and push:
+
+    ```sh
+    git add config.js
+    git commit -m "Initial commit"
+    git push origin master
     ```
     
 ## 💫 Deployment to Github Pages
@@ -76,9 +83,10 @@ You have 2 choices for Github deployment:
 - Option 2: your github.io subdomain (e.g. `<username>.github.io`) 
 
 ### Option 1: Deployment to a github.io path
-1. Create a local `gh-pages` branch and push it to Github. Then `cd` back to the `master` branch.
-2. In your Github repo, click Settings, scroll down to Github Pages, and select `gh-pages` for your source page. Also select a Jekyll theme, even though we're not using one.
-3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
+1. Create a local `gh-pages` branch and push it to Github. 
+2. `cd` back to the `master` branch.
+3. In your Github repo, click Settings, scroll down to Github Pages. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't set it to `gh-pages`). Also select a Jekyll theme, even though we're not using one.
+4. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
 
 ### Option 2: Deployment to your github.io subdomain
 1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page. Also select a Jekyll theme, even though we're not using one.
