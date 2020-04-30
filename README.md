@@ -9,6 +9,10 @@
 
 This is a Gatsby starter that integrates with p5.js.
 
+## TODO
+[] Fix Github Pages subdomain deployment
+[] Add instructions on adding your own p5.js sketch
+
 ## ✨ Features
 
 - [p5.js](https://p5js.org/)
