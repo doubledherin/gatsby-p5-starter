@@ -38,33 +38,34 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     This will create a new Gatsby project based on a clone of this repo.
 
-2.  **Start developing.**
+2.  **Set up your Github repo.**
 
     Navigate into your new site’s directory and start it up.
 
     ```sh
     cd <your-project-name>
-    gatsby develop
     ```
 
-    You'll see that Git is already initialized in your repo. To push to Github, **create a new repository on Github** and then add it as the origin remote locally with 
+    You'll see that Git is already initialized in your local repo. To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
     
     ```sh
     git remote add origin <url-of-your-github-repo>
     git push -u origin master
     ```
     
-    You should only need the `-f` (force push) tag the first push.
+3.  **Fire it up!**
 
-3.  **Open the source code and start editing!**
+    ```sh
+    gatsby develop
+    ```
 
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is GraphiQL, a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `<your-project-name>` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Notice that you also have hot reloading out of the box: make an edit to `src/pages/index.js`. Save your changes and the browser will update in real time.
 
-    Hot reloading is hot hot hot.
+    Hot reloading is hot hot hot. 
 
 ## 💫 Deployment to Github Pages
 
