@@ -12,6 +12,7 @@ node_modules/
 .npm
 .eslintcache
 .editorconfig
+.eslintrc.js
 .nvmrc
 .prettierrc.js
 .yarn-integrity
