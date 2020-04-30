@@ -5,7 +5,7 @@ module.exports = {
   siteDescription: '',
   siteShortDescription: '',
   siteKeywords: 'comma, separated, list', // Replace this with your SEO keywords
-  siteUrl: 'https://doubledherin.github.io', // Insert the protocol and canonical domain, without any pathPrefix
+  siteUrl: 'https://<your-username>.github.io',
   pathPrefix: '/my-gatsby-p5-site',
   siteLanguage: 'en',
   get copyright() {
