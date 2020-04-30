@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/contact.jsx"],"names":[],"mappings":"2FAAA,iCAEe,4BACb,uBACE","file":"component---src-pages-contact-jsx-d52f2bd16b8bec7ad256.js","sourcesContent":["import React from \"react\"\n\nexport default () => (\n  <div>\n    <p>Send us a message!</p>\n  </div>\n)"],"sourceRoot":""}

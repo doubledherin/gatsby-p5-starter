@@ -3,4 +3,5 @@ node_modules/
 .nvmrc
 .prettierrc.js
 .cache/
+public/
 .editorconfig

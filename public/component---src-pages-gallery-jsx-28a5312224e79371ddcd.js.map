@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/gallery.jsx"],"names":[],"mappings":"6FAAA,iCAEe,4BACb,uBACE","file":"component---src-pages-gallery-jsx-28a5312224e79371ddcd.js","sourcesContent":["import React from \"react\"\n\nexport default () => (\n  <div>\n    <p>Here's a gallery of cool things</p>\n  </div>\n)"],"sourceRoot":""}
