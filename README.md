@@ -62,7 +62,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 4.  **Set up your Github repo.**
 
-    To push to Github, create a new repository on Github (best to make it have the same name as your local repo) and then add it as the origin remote locally with 
+    Create a new repository on Github and then add it as the origin remote locally with 
     
     ```sh
     git remote add origin <url-of-your-github-repo>
