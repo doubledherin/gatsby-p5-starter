@@ -11,7 +11,11 @@
     "react",
     "example",
     "p5.js",
-    "starter"
+    "starter",
+    "react-typography",
+    "typography",
+    "gallery",
+    "css-grid"
   ],
   "repository": {
     "type": "git",
