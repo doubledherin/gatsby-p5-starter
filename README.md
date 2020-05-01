@@ -85,6 +85,9 @@ git push origin master
 
 ## Customizations
 
+### Typography
+This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) with the Bootstrap theme. To choose a different theme or to customize your own theme, follow [these Typography.js docs](http://kyleamathews.github.io/typography.js/) or these [Gatsy-Typography ones](https://www.gatsbyjs.org/docs/typography-js/).
+
 ### Landing Page
 TO DO
 
