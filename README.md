@@ -22,7 +22,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 ## 🚀 Getting Started
 
-0. **Make sure you have the basics.**
+### 0. Make sure you have the basics.
 
     ***Node.js***
     In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
@@ -33,8 +33,10 @@ Note that this does not use `react-p5-wrapper` -- no need.
     ***Gatsby CLI***
     You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
-1.  **Create a Gatsby site.**
-    *Don't just clone this repo.* Instead, use the Gatsby CLI to create a new site, specifying the starter project.
+### 1. Create a Gatsby site.
+    *Don't just clone this repo.* 
+    
+    Instead, use the Gatsby CLI to create a new site, specifying the starter project.
     
     ```sh
     gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter.git
@@ -42,7 +44,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     This will create a new Gatsby project based on a clone of this repo.
 
-2.  **Make some config changes.**
+### 2. Make some config changes.
 
     `cd` into your repo's directory. You'll see that Git is already initialized.
 
@@ -50,7 +52,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
     
     Also change `siteUrl` to replace `your-username` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://foobar.github.io'`.
 
-3.  ** 🔥 Fire it up! **
+### 3. 🔥 Fire it up!
 
     ```sh
     gatsby develop
@@ -64,7 +66,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     🔥 Hot reloading is hot hot hot. 🔥
 
-4.  **Set up your Github repo.**
+### 4. Set up your Github repo.
 
     Create a new repository on Github and then add it as the origin remote locally with 
     
