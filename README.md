@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+<img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
@@ -24,63 +24,64 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 ### 0. Make sure you have the basics.
 
-    ***Node.js***
-    In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
+#### Node.js
+In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
 
-    ***Git***
-    If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
+#### Git
+If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
 
-    ***Gatsby CLI***
-    You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
+#### Gatsby CLI
+You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
 ### 1. Create a Gatsby site.
-    *Don't just clone this repo.* 
-    
-    Instead, use the Gatsby CLI to create a new site, specifying the starter project.
-    
-    ```sh
-    gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter.git
-    ```
 
-    This will create a new Gatsby project based on a clone of this repo.
+*Don't just clone this repo.* 
+
+Instead, use the Gatsby CLI to create a new site, specifying the starter project.
+
+```sh
+gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter.git
+```
+
+This will create a new Gatsby project based on a clone of this repo.
 
 ### 2. Make some config changes.
 
-    `cd` into your repo's directory. You'll see that Git is already initialized.
+`cd` into your repo's directory. You'll see that Git is already initialized.
 
-    In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
-    
-    Also change `siteUrl` to replace `your-username` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://foobar.github.io'`.
+In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
+
+Also change `siteUrl` to replace `your-username` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://foobar.github.io'`.
 
 ### 3. 🔥 Fire it up!
 
-    ```sh
-    gatsby develop
-    ```
+```sh
+gatsby develop
+```
 
-    Your site is now running at `http://localhost:8000`!
+Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is GraphiQL, a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is GraphiQL, a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Notice that you also have hot reloading out of the box: make an edit to `src/pages/index.js`. Save your changes and the browser will update in real time.
+Notice that you also have hot reloading out of the box: make an edit to `src/pages/index.js`. Save your changes and the browser will update in real time.
 
-    🔥 Hot reloading is hot hot hot. 🔥
+🔥 Hot reloading is hot hot hot. 🔥
 
 ### 4. Set up your Github repo.
 
-    Create a new repository on Github and then add it as the origin remote locally with 
-    
-    ```sh
-    git remote add origin <url-of-your-github-repo>
-    ```
+Create a new repository on Github and then add it as the origin remote locally with 
 
-    Commit your config changes and push:
+```sh
+git remote add origin <url-of-your-github-repo>
+```
 
-    ```sh
-    git add config.js
-    git commit -m "Initial commit"
-    git push origin master
-    ```
+Commit your config changes and push:
+
+```sh
+git add config.js
+git commit -m "Initial commit"
+git push origin master
+```
 
 ## Customizations
 
@@ -89,7 +90,7 @@ TO DO
 
 ### Gallery Page
 TO DO
-    
+
 ## 💫 Deployment to Github Pages
 
 You have 2 choices for Github deployment: 
