@@ -7,7 +7,7 @@
   Gatsby p5.js Starter
 </h1>
 
-This is a Gatsby starter that integrates with p5.js.
+This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js.
 
 ## TODO
 [] Fix Github Pages subdomain deployment
@@ -50,7 +50,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
     
     Also change `siteUrl` to replace `your-username` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://foobar.github.io'`.
 
-3.  **Fire it up!**
+3.  ** 🔥 Fire it up! **
 
     ```sh
     gatsby develop
@@ -62,7 +62,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
     Notice that you also have hot reloading out of the box: make an edit to `src/pages/index.js`. Save your changes and the browser will update in real time.
 
-    Hot reloading is hot hot hot. 
+    🔥 Hot reloading is hot hot hot. 🔥
 
 4.  **Set up your Github repo.**
 
@@ -79,6 +79,14 @@ Note that this does not use `react-p5-wrapper` -- no need.
     git commit -m "Initial commit"
     git push origin master
     ```
+
+## Customizations
+
+### Landing Page
+TO DO
+
+### Gallery Page
+TO DO
     
 ## 💫 Deployment to Github Pages
 
