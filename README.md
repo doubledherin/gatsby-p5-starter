@@ -24,7 +24,7 @@ Note that this does not use `react-p5-wrapper` -- no need.
 
 ### 0. Make sure you have the basics.
 
-#### Node.js
+- ***Node.js***
 In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
 
 #### Git
