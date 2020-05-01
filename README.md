@@ -27,10 +27,10 @@ Note that this does not use `react-p5-wrapper` -- no need.
 - ***Node.js***
 In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
 
-#### Git
-If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
+- ***Git***
+You need Git in order to use Gatsby. If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
 
-#### Gatsby CLI
+- ***Gatsby CLI***
 You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
 ### 1. Create a Gatsby site.
