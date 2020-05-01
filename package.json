@@ -38,11 +38,15 @@
     "@emotion/styled": "^10.0.27",
     "gatsby": "^2.21.1",
     "gatsby-plugin-emotion": "^4.3.0",
+    "gatsby-plugin-typography": "^2.5.0",
     "p5": "^0.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
