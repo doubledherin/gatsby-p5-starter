@@ -53,8 +53,8 @@ const StyledGalleryItem = styled.div`
     pointer-events: none;
     z-index: 4;
     transition: .3s ease-in-out;
-    backdrop-filter: blur(5x) saturate(1.8);
-    -webkit-backdrop-filter: blur(5x) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.2);
+    -webkit-backdrop-filter: blur(5px) saturate(1.2);
   }
   .gallery-item:hover .text {
     opacity: 1;

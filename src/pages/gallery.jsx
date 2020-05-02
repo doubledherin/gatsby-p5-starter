@@ -12,8 +12,8 @@ export default () => {
   return (
   <Layout>
     <StyledGallery className="container">
-      <GalleryItem imageSrc={BlackStar} alt="spirograph" text="Spirograph" width={3} height={2}/>
-      <GalleryItem imageSrc={MarredPotential} alt="spirograph" text="Spirograph 2" width={3} height={2}/>
+      <GalleryItem imageSrc={BlackStar} alt="spirograph based on Black Star by Radiohead" text="Black Star" width={3} height={2}/>
+      <GalleryItem imageSrc={MarredPotential} alt="spirograph" text="Marred Potential" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?cat" alt="cat" text="Cat" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?dog" alt="dog" text="Dog" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?art" alt="art" text="Art"  width={3} height={2}/>
