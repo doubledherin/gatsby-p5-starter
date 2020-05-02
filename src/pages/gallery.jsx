@@ -4,13 +4,16 @@ import styled from '@emotion/styled'
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
 import BlackStar from '../images/black-star.png'
+import MarredPotential from '../images/marred-potential.png'
 
 export default () => {
-  console.log(BlackStar)
+  console.log(MarredPotential)
+  console.log(typeof MarredPotential)
   return (
   <Layout>
     <StyledGallery className="container">
       <GalleryItem imageSrc={BlackStar} alt="spirograph" text="Spirograph" width={3} height={2}/>
+      <GalleryItem imageSrc={MarredPotential} alt="spirograph" text="Spirograph 2" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?cat" alt="cat" text="Cat" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?dog" alt="dog" text="Dog" width={3} height={2}/>
       <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?art" alt="art" text="Art"  width={3} height={2}/>
