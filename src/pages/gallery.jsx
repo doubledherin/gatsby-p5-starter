@@ -4,19 +4,6 @@ import styled from '@emotion/styled'
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
 
-const StyledGallery = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin: 20px;
-  grid-auto-rows: 100px 300px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
-
-  @media screen and (max-width:500px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`
-
 export default () => (
 <Layout>
   <StyledGallery className="container">
@@ -32,3 +19,17 @@ export default () => (
   </StyledGallery>
 </Layout>
 )
+
+const StyledGallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 20px;
+  grid-auto-rows: 100px 300px;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+
+  @media screen and (max-width:500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+

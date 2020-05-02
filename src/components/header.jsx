@@ -2,12 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from "gatsby"
 
-const StyledHeader = styled.header`
-  .menu.item {
-    padding: 0px 10px 0px 0px;
-  }
-`
-
 const Header = () => {
   return (
     <StyledHeader className="header">
@@ -20,3 +14,9 @@ const Header = () => {
 }
 
 export default Header
+
+const StyledHeader = styled.header`
+  .menu.item {
+    padding: 0px 10px 0px 0px;
+  }
+`

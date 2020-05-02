@@ -1,6 +1,22 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+const GalleryItem = (props) => {
+  return (
+    <StyledGalleryItem width={props.width} height={props.height}>
+      <div className="gallery-item">
+        <div className="image">
+          <img src={props.imageSrc} alt={props.alt} />
+        </div>
+        <div className="text">{props.text}</div>
+      </div>
+    </StyledGalleryItem>
+  )
+}
+
+export default GalleryItem
+
+
 const StyledGalleryItem = styled.div`
   grid-column: span ${props => props.width ? `${props.width}` : `2`};
   grid-row: span ${props => props.height ? `${props.height}` : `2`};
@@ -64,18 +80,3 @@ const StyledGalleryItem = styled.div`
   }
 `
 
-
-const GalleryItem = (props) => {
-  return (
-    <StyledGalleryItem width={props.width} height={props.height}>
-      <div className="gallery-item">
-        <div className="image">
-          <img src={props.imageSrc} alt={props.alt} />
-        </div>
-        <div className="text">{props.text}</div>
-      </div>
-    </StyledGalleryItem>
-  )
-}
-
-export default GalleryItem
