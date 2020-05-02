@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import styled from '@emotion/styled'
 import p5 from '../scripts/p5.min'
-
-const SketchWrapper = styled.div``
 
 class Sketch extends Component {
   constructor(props) {
@@ -25,7 +22,7 @@ class Sketch extends Component {
   }
 
   render() {
-    return <SketchWrapper ref={this.sketchRef} />
+    return <div ref={this.sketchRef} />
   }
 }
 
