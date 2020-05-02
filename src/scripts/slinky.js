@@ -1,4 +1,4 @@
-export default function sketch(p) {
+export default function slinky(p) {
   // ~~~~~~ Initialize variables ~~~~~~~~~
   let numberOfVertices = 20
   let friction = 0.01

@@ -3,22 +3,26 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
+import BlackStar from '../images/black-star.png'
 
-export default () => (
-<Layout>
-  <StyledGallery className="container">
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?cat" alt="cat" text="Cat" width={3} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?dog" alt="dog" text="Dog" width={3} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?art" alt="art" text="Art"  width={3} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?food" alt="food" text="Food" width={4} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?fashion" alt="fashion" text="Fashion" width={2} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?science" alt="science" text="Science" width={1} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?nature" alt="nature" text="Nature"  width={2} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?people" alt="people" text="People"  width={3} height={2}/>
-    <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?travel" alt="travel" text="Travel"  width={3} height={2}/>
-  </StyledGallery>
-</Layout>
-)
+export default () => {
+  console.log(BlackStar)
+  return (
+  <Layout>
+    <StyledGallery className="container">
+      <GalleryItem imageSrc={BlackStar} alt="spirograph" text="Spirograph" width={3} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?cat" alt="cat" text="Cat" width={3} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?dog" alt="dog" text="Dog" width={3} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?art" alt="art" text="Art"  width={3} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?food" alt="food" text="Food" width={4} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?fashion" alt="fashion" text="Fashion" width={2} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?science" alt="science" text="Science" width={1} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?nature" alt="nature" text="Nature"  width={2} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?people" alt="people" text="People"  width={3} height={2}/>
+      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?travel" alt="travel" text="Travel"  width={3} height={2}/>
+    </StyledGallery>
+  </Layout>
+)}
 
 const StyledGallery = styled.div`
   display: grid;
