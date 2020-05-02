@@ -42,6 +42,7 @@ const StyledGalleryItem = styled.div`
     transform: scale(1.5);
   }
   .gallery-item .text {
+    text-shadow: 2px 2px #000000;
     text-align: center;
     padding: 0px;
     opacity: 0;
