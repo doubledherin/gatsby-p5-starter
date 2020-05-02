@@ -2,8 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const GalleryItem = (props) => {
+
   return (
-    <StyledGalleryItem width={props.width} height={props.height}>
+    <StyledGalleryItem width={props.width} height={props.height} onClick={() => window.location = "/"}>
       <div className="gallery-item">
         <div className="image">
           <img src={props.imageSrc} alt={props.alt} />
