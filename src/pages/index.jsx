@@ -3,14 +3,14 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Sketch from '../components/sketch'
-import slinky from '../scripts/slinky'
+import marredPotential from '../scripts/sketches/marredPotential'
 
 const IndexPage = () => {
   return (
     <div>
       <Layout>
         <SEO />
-        <Sketch sketch={slinky}/>
+        <Sketch sketch={marredPotential}/>
       </Layout>
     </div>
   )

@@ -3,12 +3,11 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
-import BlackStar from '../images/black-star.png'
-import MarredPotential from '../images/marred-potential.png'
+import BlackStar from '../images/blackStar.png'
+import MarredPotential from '../images/marredPotential.png'
 
 export default () => {
-  console.log(MarredPotential)
-  console.log(typeof MarredPotential)
+
   return (
   <Layout>
     <StyledGallery className="container">
