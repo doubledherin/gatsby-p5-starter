@@ -43,6 +43,7 @@
     "gatsby": "^2.21.1",
     "gatsby-plugin-emotion": "^4.3.0",
     "gatsby-plugin-typography": "^2.5.0",
+    "gatsby-source-filesystem": "^2.3.0",
     "p5": "^0.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",

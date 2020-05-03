@@ -3,10 +3,12 @@ import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
-import BlackStar from '../images/blackStar.png'
+import BlackStar from 'images/blackStar.png'
 import MarredPotential from '../images/marredPotential.png'
 
-export default () => {
+export default ({ data }) => {
+
+  console.log("DATA: ", data)
 
   return (
   <Layout>
@@ -25,6 +27,25 @@ export default () => {
     </StyledGallery>
   </Layout>
 )}
+
+export const query = graphql`
+  query {
+    allFile {
+      edges {
+        node {
+          name
+          absolutePath
+          base
+          relativePath
+          relativeDirectory
+          sourceInstanceName
+          publicURL
+          dir
+        }
+      }
+    }
+  }
+`
 
 const StyledGallery = styled.div`
   display: grid;
