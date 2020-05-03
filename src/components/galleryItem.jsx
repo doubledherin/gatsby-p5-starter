@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import Img from "gatsby-image/withIEPolyfill"
 
 const GalleryItem = (props) => {
+
   return (
     <StyledGalleryItem width={props.width} height={props.height} onClick={() => window.location = "/"}>
       <div className="gallery-item">

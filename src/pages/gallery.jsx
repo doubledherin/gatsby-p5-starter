@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
 
 export default ({ data }) => {
+
   const { allFile: { nodes } } = data
 
   return (
@@ -39,7 +40,7 @@ export const query = graphql`
         childImageSharp {
           fluid {
             originalName
-            src
+            ...GatsbyImageSharpFluid
           }
         }
       }
