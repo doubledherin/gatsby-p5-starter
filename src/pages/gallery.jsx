@@ -4,48 +4,47 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
-import BlackStar from '../images/black-star.png'
-import MarredPotential from '../images/marred-potential.png'
 
 export default ({ data }) => {
-
-  console.log("DATA: ", data)
+  const { allFile: { nodes } } = data
 
   return (
-  <Layout>
-    <StyledGallery className="container">
-      <GalleryItem imageSrc={BlackStar} alt="spirograph based on Black Star by Radiohead" text={`"Black Star" by Radiohead`} width={3} height={2}/>
-      <GalleryItem imageSrc={MarredPotential} alt="spirograph" text="Marred Potential" width={3} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?cat" alt="cat" text="Cat" width={3} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?dog" alt="dog" text="Dog" width={3} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?art" alt="art" text="Art"  width={3} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?food" alt="food" text="Food" width={4} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?fashion" alt="fashion" text="Fashion" width={2} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?science" alt="science" text="Science" width={1} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?nature" alt="nature" text="Nature"  width={2} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?people" alt="people" text="People"  width={3} height={2}/>
-      <GalleryItem imageSrc="https://source.unsplash.com/1600x900/?travel" alt="travel" text="Travel"  width={3} height={2}/>
-    </StyledGallery>
+    <Layout>
+      <StyledGallery className="container">
+        { data && nodes && 
+          nodes.map(node => {
+            const { originalName } = node.childImageSharp.fluid
+            const text = getText(originalName)
+            return <GalleryItem key={node.id} imageSrc={node.childImageSharp.fluid.src} alt={`spirograph based on ${text}`} text={text} width={3} height={2}/>
+          })
+        }
+      </StyledGallery>
   </Layout>
 )}
 
+function getText(filename) {
+  const withoutExtension = filename.split('.')[0]
+  const words = withoutExtension.split('-')
+  const initialCappedWords = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+  })
+  return initialCappedWords.join(" ")
+}
+
 export const query = graphql`
   query {
-    allFile(filter: {relativeDirectory: {eq: "images"}}) {
-      edges {
-        node {
-          name
-          absolutePath
-          base
-          relativePath
-          relativeDirectory
-          sourceInstanceName
-          publicURL
-          dir
+    allFile(filter: {relativePath: {regex: "/^images\/gallery/"}}) {
+      nodes {
+        id
+        childImageSharp {
+          fluid {
+            originalName
+            src
+          }
         }
       }
     }
-  }
+  }  
 `
 
 const StyledGallery = styled.div`

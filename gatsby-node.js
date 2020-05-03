@@ -12,7 +12,4 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
-///
-exports.onCreateNode = ({ node }) => {
-  console.log(node.internal.type)
-}
+
