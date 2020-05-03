@@ -92,7 +92,9 @@ This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) 
 TO DO
 
 ### Gallery Page
-TO DO
+The images in the Gallery are automatically optimized for fluid responsive rendering using the `gatsby-image`, `gatsby-plugin-sharp`, and `gatsby-transformer-sharp`. They are dynamically rendered via GraphQL queries enabled by the `gatsby-source-filesystem` plugin.
+
+Any image in `src/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
 
 ## 💫 Deployment to Github Pages
 
