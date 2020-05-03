@@ -1,10 +1,11 @@
 import React from "react"
 import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
-import BlackStar from 'images/blackStar.png'
-import MarredPotential from '../images/marredPotential.png'
+import BlackStar from '../images/black-star.png'
+import MarredPotential from '../images/marred-potential.png'
 
 export default ({ data }) => {
 
@@ -30,7 +31,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile {
+    allFile(filter: {relativeDirectory: {eq: "images"}}) {
       edges {
         node {
           name
