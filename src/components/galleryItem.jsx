@@ -8,7 +8,7 @@ const GalleryItem = (props) => {
     <StyledGalleryItem width={props.width} height={props.height} onClick={() => window.location = "/"}>
       <div className="gallery-item">
         <div className="image">
-          <img src={props.imageSrc} alt={props.alt} />
+          <Img fluid={props.fluid} alt={props.alt} />
         </div>
         <div className="text">{props.text}</div>
       </div>
@@ -23,9 +23,8 @@ const StyledGalleryItem = styled.div`
   grid-column: span ${props => props.width ? `${props.width}` : `2`};
   grid-row: span ${props => props.height ? `${props.height}` : `2`};
   .gallery-item {
-    width: 100%;
-    height: 100%;
     position: relative;
+    border: solid white 2px;
   }
   .gallery-item .image {
     width: 100%;
@@ -35,13 +34,12 @@ const StyledGalleryItem = styled.div`
   .gallery-item .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     object-position: 50% 50%;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: 2s ease-in-out;
   }
   .gallery-item:hover .image img {
-    transform: scale(1.5);
+    transform: scale(1.1);
   }
   .gallery-item .text {
     text-shadow: 2px 2px #000000;
