@@ -4,7 +4,6 @@ import Img from "gatsby-image/withIEPolyfill"
 
 import Layout from "../components/layout"
 import Sketch from '../components/sketch'
-import marredPotential from '../scripts/sketches/marred-potential'
 
 export default function GalleryItemPage( { data } ) {
 
@@ -23,9 +22,10 @@ export default function GalleryItemPage( { data } ) {
       </Layout>
     )
   } else {
+    //TODO: FIgure out how to load this sketch!
     return (
       <Layout>
-        <Sketch sketch={marredPotential}/>
+        <Sketch sketch={ async () => await import(`../scripts/sketches/${node.parent.name}.js`)}/>
       </Layout>
     )
   }
@@ -45,6 +45,11 @@ export const query = graphql`
         id
         fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid_noBase64
+        }
+        parent {
+          ... on File {
+            name
+          }
         }
       }
     }
