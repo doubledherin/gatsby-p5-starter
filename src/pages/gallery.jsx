@@ -16,12 +16,18 @@ export default ({ data }) => {
           nodes.map(node => {
             const { originalName } = node.childImageSharp.fluid
             const text = getText(originalName)
-            return <GalleryItem key={node.id} fluid={node.childImageSharp.fluid} imageSrc={node.childImageSharp.fluid.src} alt={`spirograph based on ${text}`} text={text} width={2} height={2}/>
+            const slug = getSlug(originalName)
+            return <GalleryItem key={node.id} fluid={node.childImageSharp.fluid} imageSrc={node.childImageSharp.fluid.src} alt={`spirograph based on ${text}`} text={text} width={2} height={2} slug={slug} />
           })
         }
       </StyledGallery>
   </Layout>
 )}
+
+function getSlug(filename) {
+  const withoutExtension = filename.split('.')[0]
+  return `/${withoutExtension}`
+}
 
 function getText(filename) {
   const withoutExtension = filename.split('.')[0]

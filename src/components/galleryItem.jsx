@@ -5,7 +5,7 @@ import Img from "gatsby-image/withIEPolyfill"
 const GalleryItem = (props) => {
 
   return (
-    <StyledGalleryItem width={props.width} height={props.height} onClick={() => window.location = "/"}>
+    <StyledGalleryItem width={props.width} height={props.height} onClick={() => window.location = props.slug}>
       <div className="gallery-item">
         <div className="image">
           <Img fluid={props.fluid} alt={props.alt} />
