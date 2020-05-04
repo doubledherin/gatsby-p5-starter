@@ -96,6 +96,8 @@ The images in the Gallery are automatically optimized for fluid responsive rende
 
 Any image in `src/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
 
+Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
+
 ## 💫 Deployment to Github Pages
 
 You have 2 choices for Github deployment: 
