@@ -17,17 +17,23 @@ export default ({ data }) => {
             const { originalName } = node.childImageSharp.fluid
             const text = getText(originalName)
             const slug = getSlug(originalName)
-            return <GalleryItem key={node.id} fluid={node.childImageSharp.fluid} imageSrc={node.childImageSharp.fluid.src} alt={`spirograph based on ${text}`} text={text} width={2} height={2} slug={slug} />
+            
+            return (
+              <GalleryItem 
+                key={node.id} 
+                fluid={node.childImageSharp.fluid} 
+                imageSrc={node.childImageSharp.fluid.src} 
+                alt={`spirograph based on ${text}`} 
+                text={text} 
+                width={2} 
+                height={2} 
+                slug={slug} />
+            )
           })
         }
       </StyledGallery>
   </Layout>
 )}
-
-function getSlug(filename) {
-  const withoutExtension = filename.split('.')[0]
-  return `/${withoutExtension}`
-}
 
 function getText(filename) {
   const withoutExtension = filename.split('.')[0]
@@ -36,6 +42,11 @@ function getText(filename) {
     return word.charAt(0).toUpperCase() + word.slice(1)
   })
   return initialCappedWords.join(" ")
+}
+
+function getSlug(filename) {
+  const withoutExtension = filename.split('.')[0]
+  return `/${withoutExtension}`
 }
 
 export const query = graphql`
