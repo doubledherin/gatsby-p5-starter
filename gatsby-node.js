@@ -1,6 +1,8 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
+const { galleryPathPrefix } = require(`./src/constants`)
+
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === 'build-html') {
     actions.setWebpackConfig({
@@ -15,8 +17,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
-
-const galleryPathPrefix = "images/gallery"
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === "ImageSharp") {

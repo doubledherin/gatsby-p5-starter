@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import GalleryItem from '../components/galleryItem'
+import { galleryPathPrefix } from '../constants'
 
 export default ({ data }) => {
 
@@ -14,9 +15,10 @@ export default ({ data }) => {
       <StyledGallery className="container">
         { data && nodes && 
           nodes.map(node => {
+            const { relativePath } = node
             const { originalName } = node.childImageSharp.fluid
-            const text = getText(originalName)
-            const slug = getSlug(originalName)
+            const text = deriveText(originalName)
+            const slug = deriveSlug(relativePath)
             
             return (
               <GalleryItem 
@@ -35,7 +37,7 @@ export default ({ data }) => {
   </Layout>
 )}
 
-function getText(filename) {
+function deriveText(filename) {
   const withoutExtension = filename.split('.')[0]
   const words = withoutExtension.split('-')
   const initialCappedWords = words.map(word => {
@@ -44,9 +46,9 @@ function getText(filename) {
   return initialCappedWords.join(" ")
 }
 
-function getSlug(filename) {
-  const withoutExtension = filename.split('.')[0]
-  return `/${withoutExtension}`
+function deriveSlug(relativePath) {
+  const withoutExtension = relativePath.split('.')[0].replace(galleryPathPrefix, '')
+  return `${withoutExtension}/`
 }
 
 export const query = graphql`
@@ -60,6 +62,7 @@ export const query = graphql`
             ...GatsbyImageSharpFluid
           }
         }
+        relativePath
       }
     }
   }  

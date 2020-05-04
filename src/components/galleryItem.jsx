@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Img from "gatsby-image/withIEPolyfill"
 
+// TODO: Figure out styling / size of images.
 const GalleryItem = (props) => {
 
   return (
