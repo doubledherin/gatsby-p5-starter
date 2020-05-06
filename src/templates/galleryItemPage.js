@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 
@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Sketch from '../components/sketch'
 
 export default function GalleryItemPage( { data } ) {
+
+  const [ sketch, setSketch ] = useState()
 
   const node = data.allImageSharp.nodes[0]
   const slug = node && node.fields ? node.fields.slug : ''
@@ -22,12 +24,10 @@ export default function GalleryItemPage( { data } ) {
       </Layout>
     )
   } else {
-    //TODO: FIgure out how to load this sketch!
-    return (
-      <Layout>
-        <Sketch sketch={ async () => await import(`../scripts/sketches/${node.parent.name}.js`)}/>
-      </Layout>
-    )
+    import(`../scripts/sketches/${node.parent.name}.js`).then(result => {
+      setSketch(result)
+    }) // TODO Catch failed import?
+    return sketch ? <Sketch sketch={sketch.default} /> : <div>Loading</div>
   }
 }
 
@@ -44,7 +44,7 @@ export const query = graphql`
         }
         id
         fluid(maxWidth: 400) {
-          ...GatsbyImageSharpFluid_noBase64
+          ...GatsbyImageSharpFluid
         }
         parent {
           ... on File {

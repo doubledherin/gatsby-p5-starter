@@ -2,7 +2,7 @@
 
 // The basic idea here is that you'll need to use the `p` namespace to access
 // all non-static p5 methods and variables here. Any static methods need to be accessed with the p5 namespace (imported above).
-export default function sketch(p) {
+export default function marredPotential(p) {
 
   // ~~~~~~ Initialize variables ~~~~~~~~~
   let hypotrochoids = []

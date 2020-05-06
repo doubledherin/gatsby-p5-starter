@@ -3,7 +3,6 @@ import p5 from '../scripts/p5.min'
 
 class Sketch extends Component {
   constructor(props) {
-    console.log("SKETCH PROPS: ", props)
     super(props)
     this.sketchRef = React.createRef()
     this.canvas = null
