@@ -15,12 +15,9 @@ export default function marredPotential(p) {
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    let width = p.min(p.windowWidth, p.windowHeight) - 100
-    p.createCanvas(width, width)
-  
+    p.createCanvas(p.windowWidth, p.windowHeight)
     p.background(0)
     p.smooth()
-    p.translate(width/2.0, width/2.0)
     p.ellipseMode(p.CENTER)
     p.stroke(245, 230, 156, 100)
     const hValues = [19, 140, 175, 50, 90]
