@@ -11,10 +11,8 @@ const Header = () => {
     const scrollPosition = window.scrollY
     if (scrollPosition > 10) {
       setScrolledClassName('scrolled')
-      console.log('added scrolled')
     } else {
       setScrolledClassName('')
-      console.log('removed scrolled')
     }
   }, [setScrolledClassName])
 
