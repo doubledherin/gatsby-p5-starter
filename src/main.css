@@ -536,6 +536,125 @@
   }
 }
 
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: #000;
+  color: #fff;
+  width: 70%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 1px 1px 1px black;
+          box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 15%;
+  top: 30%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.close-icon {
+  position: relative;
+  padding: 26px 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+.close-icon__line {
+  display: block;
+  position: relative;
+  background: #fff;
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+.close-icon__line::before, .close-icon__line::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: background .8s ease;
+  transition: background .8s ease;
+}
+
+.close-icon__line::before {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.close-icon__line::after {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.close-btn {
+  position: absolute;
+  top: -100px;
+}
+
+.close-btn:focus ~ .close-icon .close-icon__line::before {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.close-btn:focus ~ .close-icon .close-icon__line::after {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+@media screen and (max-width: 767px) {
+  .close-icon {
+    display: block;
+  }
+  .close-icon__line {
+    -webkit-animation: closedMiddle 0.8s backwards;
+            animation: closedMiddle 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .close-icon__line::before {
+    -webkit-animation: closedTop 0.8s backwards;
+            animation: closedTop 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .close-icon__line::after {
+    -webkit-animation: closedBottom 0.8s backwards;
+            animation: closedBottom 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .close-btn:checked ~ .close-icon {
+    border-radius: 50%;
+    -webkit-animation: pulse 1s;
+            animation: pulse 1s;
+  }
+  .close-btn:checked ~ .close-icon .close-icon__line {
+    background: #fff;
+    -webkit-animation: openMiddle 0.8s forwards;
+            animation: openMiddle 0.8s forwards;
+  }
+  .close-btn:checked ~ .close-icon .close-icon__line::before {
+    background: #fff;
+    -webkit-animation: openTop 0.8s forwards;
+            animation: openTop 0.8s forwards;
+  }
+  .close-btn:checked ~ .close-icon .close-icon__line::after {
+    background: #fff;
+    -webkit-animation: openBottom 0.8s forwards;
+            animation: openBottom 0.8s forwards;
+  }
+}
+
+@media (min-width: 600px) {
+  .modal {
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
