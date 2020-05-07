@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className={`main-header ${scrolledClassName}`}>
       <div className="logo">
-        <a href="#">LOGO</a>
+        <a href="/">LOGO</a>
       </div>
       <input type="checkbox" className="menu-btn" id="menu-btn" />
       <label htmlFor="menu-btn" className="menu-icon">
