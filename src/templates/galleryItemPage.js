@@ -17,16 +17,14 @@ export default function GalleryItemPage( { data } ) {
       <Layout>
         <div className="container">
           <div className="image">
-            <Img fluid={node.fluid} alt={"also wahtever"} />
+            <Img fluid={node.fluid} alt={''} />
           </div>
-          <div className="text">{"whatever"}</div>
+          <div className="text">{''}</div>
         </div>
       </Layout>
     )
   } else {
-    import(`../scripts/sketches/${node.parent.name}.js`).then(result => {
-      setSketch(result)
-    }) // TODO Catch failed import?
+    import(`../scripts/sketches/${node.parent.name}.js`).then(result => setSketch(result))
     return sketch ? <Sketch sketch={sketch.default} /> : <div>Loading</div>
   }
 }

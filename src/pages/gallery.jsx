@@ -1,5 +1,4 @@
 import React from "react"
-import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -12,7 +11,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <StyledGallery className="container">
+      <div className="container">
         { data && nodes && 
           nodes.map(node => {
             const { relativePath } = node
@@ -33,7 +32,7 @@ export default ({ data }) => {
             )
           })
         }
-      </StyledGallery>
+      </div>
   </Layout>
 )}
 
@@ -67,17 +66,3 @@ export const query = graphql`
     }
   }  
 `
-
-const StyledGallery = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin: 20px;
-  grid-auto-rows: 100px 300px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
-
-  @media screen and (max-width:500px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`
-

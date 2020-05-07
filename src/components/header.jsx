@@ -1,22 +1,53 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from "gatsby"
 
+import "../main.scss"
+
 const Header = () => {
+
+  const [ scrolledClassName, setScrolledClassName ] = useState('')
+
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY
+    if (scrollPosition > 10) {
+      setScrolledClassName('scrolled')
+      console.log('added scrolled')
+    } else {
+      setScrolledClassName('')
+      console.log('removed scrolled')
+    }
+  }, [setScrolledClassName])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [scrolledClassName])
+ 
   return (
-    <StyledHeader className="header">
-        <Link className="menu item" to="/">Home</Link>
-        <Link className="menu item" to="/gallery/">Gallery</Link>
-        <Link className="menu item" to="/about/">About</Link>
-        <Link className="menu item" to="/contact/">Contact</Link>
-    </StyledHeader>
+    <header className={`main-header ${scrolledClassName}`}>
+      <div className="logo">
+        <a href="#">LOGO</a>
+      </div>
+      <input type="checkbox" className="menu-btn" id="menu-btn" />
+      <label htmlFor="menu-btn" className="menu-icon">
+        <span className="menu-icon__line"></span>
+      </label>
+      <ul className="nav-links">
+        <li className="nav-link">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/gallery">Gallery</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    </header>
   )
 }
 
 export default Header
-
-const StyledHeader = styled.header`
-  .menu.item {
-    padding: 0px 10px 0px 0px;
-  }
-`

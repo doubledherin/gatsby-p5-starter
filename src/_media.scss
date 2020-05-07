@@ -1,0 +1,98 @@
+@media screen and (max-width: 767px) {
+  .main-header {
+    .menu-icon {
+      display: block;
+
+      &__line {
+        animation: closedMiddle 0.8s backwards;
+        animation-direction: reverse;
+
+        &::before {
+          animation: closedTop 0.8s backwards;
+          animation-direction: reverse;
+        }
+        &::after {
+          animation: closedBottom 0.8s backwards;
+          animation-direction: reverse;
+        }
+      }
+    }
+    .nav-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10rem 0;
+      width: 100vw;
+      height: 100vh;
+      font-size: 1.2rem;
+      color: white;
+      background: #232323;
+      transition: 
+        opacity .8s .5s,
+        clip-path 1s .5s;
+      clip-path: circle(200px at top right);
+
+      .nav-link {
+        opacity: 0;
+        transform: translateX(100%);
+        width: 100%;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 2rem 0;
+        }
+      }
+    }
+
+    .menu-btn:checked ~ .nav-links {
+      opacity: 1;
+      clip-path: circle(100% at center);
+
+      .nav-link {
+        opacity: 1;
+        transform: translateX(0);
+        transition:
+          opacity .4s ease-in-out,
+          transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        
+          &:nth-of-type(1) {
+            transition-delay: .7s;
+          }
+          &:nth-of-type(2) {
+            transition-delay: .8s;
+          }
+          &:nth-of-type(3) {
+            transition-delay: .9s;
+          }
+          &:nth-of-type(4) {
+            transition-delay: 1s;
+          }
+      }
+    }
+    .menu-btn:checked ~ .menu-icon {
+      border-radius: 50%;
+      animation: pulse 1s;
+      .menu-icon__line {
+        background: #fff;
+        animation: openMiddle 0.8s forwards;
+        &::before {
+          background: #fff;
+          animation: openTop 0.8s forwards;
+        }
+        &::after {
+          background: #fff;
+          animation: openBottom 0.8s forwards;
+        }
+      }
+    }
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
