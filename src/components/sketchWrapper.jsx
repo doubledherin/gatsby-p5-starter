@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import p5 from '../scripts/p5.min'
 
-class Sketch extends Component {
+class SketchWrapper extends Component {
   constructor(props) {
     super(props)
     this.sketchRef = React.createRef()
@@ -26,4 +26,4 @@ class Sketch extends Component {
   }
 }
 
-export default Sketch
+export default SketchWrapper

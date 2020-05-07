@@ -1,16 +1,14 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Sketch from '../components/sketch'
+import SketchWrapper from '../components/sketchWrapper'
 import slinky from '../scripts/sketches/slinky'
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <div>
       <Layout>
-        <SEO />
-        <Sketch sketch={slinky}/>
+        <SketchWrapper sketch={slinky}/>
       </Layout>
     </div>
   )

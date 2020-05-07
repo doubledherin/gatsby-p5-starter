@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Link } from "gatsby"
 
-import "../main.scss"
+import "../../main.scss"
 
 const Header = () => {
 

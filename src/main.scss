@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import 'header';
-@import 'media';
-@import 'animations';
-@import 'gallery';
-@import 'galleryItem';
+@import 'styles/components/layout/header/header';
+@import 'styles/components/layout/header/media';
+@import 'styles/components/layout/header/animations';
+@import 'styles/pages/gallery';
+@import 'styles/components/galleryItem';
 
 *, *::before, *::after {
   box-sizing: border-box;

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 
 import Layout from "../components/layout"
-import Sketch from '../components/sketch'
+import SketchWrapper from '../components/sketchWrapper'
 
 export default function GalleryItemPage( { data } ) {
 
@@ -25,7 +25,7 @@ export default function GalleryItemPage( { data } ) {
     )
   } else {
     import(`../scripts/sketches/${node.parent.name}.js`).then(result => setSketch(result))
-    return sketch ? <Sketch sketch={sketch.default} /> : <div>Loading</div>
+    return sketch ? <SketchWrapper sketch={sketch.default} /> : <div>Loading</div>
   }
 }
 
