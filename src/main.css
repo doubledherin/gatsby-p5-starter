@@ -454,7 +454,6 @@
 
 .gallery-item-container .gallery-item {
   position: relative;
-  border: solid white 2px;
 }
 
 .gallery-item-container .gallery-item .image {
@@ -662,11 +661,15 @@
   padding: 0;
 }
 
+html, body {
+  background-color: #272727;
+}
+
 body {
   font-family: 'Montserrat', 'san-serif';
 }
 
-.container {
+.page-container {
   width: 80%;
   margin: 0 auto;
 }

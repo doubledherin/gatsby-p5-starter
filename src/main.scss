@@ -12,11 +12,15 @@
   padding: 0;
 }
 
+html, body {
+  background-color: #272727;
+}
+
 body {
   font-family: 'Montserrat', 'san-serif';
 }
 
-.container {
+.page-container {
   width: 80%;
   margin: 0 auto;
 }
