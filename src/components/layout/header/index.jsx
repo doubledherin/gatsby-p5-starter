@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import Navlink from './navlink'
 import { Link } from "gatsby"
 
 import "../../styles/main.scss"
@@ -6,6 +7,7 @@ import "../../styles/main.scss"
 const Header = () => {
 
   const [ scrolledClassName, setScrolledClassName ] = useState('')
+  const [ displayMobileHeader, setDisplayMobileHeader ] = useState(false)
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY
@@ -31,18 +33,10 @@ const Header = () => {
         <span className="menu-icon__line"></span>
       </label>
       <ul className="nav-links">
-        <li className="nav-link">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/gallery">Gallery</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="nav-link">
-          <Link to="/contact">Contact</Link>
-        </li>
+        <Navlink to="/">Home</Navlink>
+        <Navlink to="/gallery">Gallery</Navlink>
+        <Navlink to="/about">About</Navlink>
+        <Navlink to="/contact">Contact</Navlink>
       </ul>
     </header>
   )
