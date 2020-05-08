@@ -434,6 +434,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
+  padding-top: 65px;
   margin: 0 20px;
   grid-auto-rows: 200px 200px;
   grid-gap: 10px;
@@ -666,6 +667,10 @@ html, body {
 
 body {
   font-family: 'Montserrat', 'san-serif';
+}
+
+canvas {
+  padding-top: 65px;
 }
 
 .page-container {
