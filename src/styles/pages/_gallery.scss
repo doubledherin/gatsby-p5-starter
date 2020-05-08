@@ -1,7 +1,7 @@
-.container {
+.gallery-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin: 20px;
+  margin: 0 20px;
   grid-auto-rows: 200px 200px;
   grid-gap: 10px;
   grid-auto-flow: dense;

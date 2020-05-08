@@ -6,11 +6,9 @@ import slinky from '../scripts/sketches/slinky'
 
 const IndexPage = (props) => {
   return (
-    <div>
-      <Layout>
-        <SketchWrapper sketch={slinky}/>
-      </Layout>
-    </div>
+    <Layout>
+      <SketchWrapper sketch={slinky}/>
+    </Layout>
   )
 }
 

@@ -6,7 +6,7 @@ import SEO from './seo'
 
 const Layout = ({ title, children }) => {
   return (
-    <div>
+    <div className="layout-container">
       <SEO title={title} />
       <Header />
 

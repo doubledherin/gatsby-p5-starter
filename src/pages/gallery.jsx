@@ -11,7 +11,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="gallery-container">
         { data && nodes && 
           nodes.map(node => {
             const { relativePath } = node
