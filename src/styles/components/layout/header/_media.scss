@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 @media screen and (max-width: 767px) {
   .main-header {
     .menu-icon {
@@ -29,8 +31,8 @@
       width: 100vw;
       height: 100vh;
       font-size: 1.2rem;
-      color: white;
-      background: #232323;
+      color: $text-color;
+      background: $header-background;
       transition: 
         opacity .8s .5s,
         clip-path 1s .5s;
@@ -78,14 +80,14 @@
       border-radius: 50%;
       animation: pulse 1s;
       .menu-icon__line {
-        background: #fff;
+        background: $text-color;
         animation: openMiddle 0.8s forwards;
         &::before {
-          background: #fff;
+          background: $text-color;
           animation: openTop 0.8s forwards;
         }
         &::after {
-          background: #fff;
+          background: $text-color;
           animation: openBottom 0.8s forwards;
         }
       }

@@ -1,11 +1,12 @@
+@import '../variables';
+
 .modal {
   position: fixed;
   z-index: 500;
-  background-color: #000;
-  color: #fff;
+  background-color: $modal-background;
+  color: $text-color;
   width: 70%;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px $shadow;
   padding: 16px;
   left: 15%;
   top: 30%;
@@ -22,7 +23,7 @@
   &__line {
     display: block;
     position: relative;
-    background: #fff;
+    background: $text-color;
     height: 2px;
     width: 20px;
     border-radius: 4px;
@@ -33,7 +34,7 @@
       height: 100%;
       width: 100%;
       border-radius: 4px;
-      background: #fff;
+      background: $text-color;
       transition: background .8s ease;
     }
 
@@ -83,14 +84,14 @@
     border-radius: 50%;
     animation: pulse 1s;
     .close-icon__line {
-      background: #fff;
+      background: $text-color;
       animation: openMiddle 0.8s forwards;
       &::before {
-        background: #fff;
+        background: $text-color;
         animation: openTop 0.8s forwards;
       }
       &::after {
-        background: #fff;
+        background: $text-color;
         animation: openBottom 0.8s forwards;
       }
     }

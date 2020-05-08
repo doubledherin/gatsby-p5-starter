@@ -1,3 +1,5 @@
+@import '../variables';
+
 .gallery-item-container {
   grid-column: span 3;
   grid-row: span 1;
@@ -20,8 +22,8 @@
     transform: scale(1.1);
   }
   .gallery-item .text {
-    color: #fff;
-    text-shadow: 2px 2px #000000;
+    color: $text-color;
+    text-shadow: 2px 2px $shadow;
     text-align: center;
     padding: 0px;
     opacity: 0;

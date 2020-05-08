@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 .main-header {
-  background-color: #272727;
+  background-color: #56626b;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +14,7 @@
   height: 65px;
   width: 100vw;
   padding: 0 10vw;
-  color: #fff;
+  color: #dbe9f4;
   z-index: 1;
   -webkit-transition: .4s ease-out;
   transition: .4s ease-out;
@@ -77,7 +77,7 @@
 .main-header .menu-icon__line {
   display: block;
   position: relative;
-  background: #fff;
+  background: #dbe9f4;
   height: 2px;
   width: 20px;
   border-radius: 4px;
@@ -89,7 +89,7 @@
   height: 100%;
   width: 100%;
   border-radius: 4px;
-  background: #fff;
+  background: #dbe9f4;
   -webkit-transition: background .8s ease;
   transition: background .8s ease;
 }
@@ -122,11 +122,11 @@
 .main-header.scrolled {
   height: 50px;
   background: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  color: #dbe9f4;
 }
 
 .main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
-  background: #fff;
+  background: #dbe9f4;
 }
 
 @media screen and (max-width: 767px) {
@@ -167,8 +167,8 @@
     width: 100vw;
     height: 100vh;
     font-size: 1.2rem;
-    color: white;
-    background: #232323;
+    color: #dbe9f4;
+    background: #56626b;
     -webkit-transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
     transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
     transition: opacity .8s .5s, clip-path 1s .5s;
@@ -223,17 +223,17 @@
             animation: pulse 1s;
   }
   .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openMiddle 0.8s forwards;
             animation: openMiddle 0.8s forwards;
   }
   .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::before {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openTop 0.8s forwards;
             animation: openTop 0.8s forwards;
   }
   .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::after {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openBottom 0.8s forwards;
             animation: openBottom 0.8s forwards;
   }
@@ -478,8 +478,8 @@
 }
 
 .gallery-item-container .gallery-item .text {
-  color: #fff;
-  text-shadow: 2px 2px #000000;
+  color: #dbe9f4;
+  text-shadow: 2px 2px #000;
   text-align: center;
   padding: 0px;
   opacity: 0;
@@ -538,12 +538,11 @@
 .modal {
   position: fixed;
   z-index: 500;
-  background-color: #000;
-  color: #fff;
+  background-color: #acadaa;
+  color: #dbe9f4;
   width: 70%;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 1px 1px 1px black;
-          box-shadow: 1px 1px 1px black;
+  -webkit-box-shadow: 1px 1px 1px #000;
+          box-shadow: 1px 1px 1px #000;
   padding: 16px;
   left: 15%;
   top: 30%;
@@ -564,7 +563,7 @@
 .close-icon__line {
   display: block;
   position: relative;
-  background: #fff;
+  background: #dbe9f4;
   height: 2px;
   width: 20px;
   border-radius: 4px;
@@ -576,7 +575,7 @@
   height: 100%;
   width: 100%;
   border-radius: 4px;
-  background: #fff;
+  background: #dbe9f4;
   -webkit-transition: background .8s ease;
   transition: background .8s ease;
 }
@@ -631,17 +630,17 @@
             animation: pulse 1s;
   }
   .close-btn:checked ~ .close-icon .close-icon__line {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openMiddle 0.8s forwards;
             animation: openMiddle 0.8s forwards;
   }
   .close-btn:checked ~ .close-icon .close-icon__line::before {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openTop 0.8s forwards;
             animation: openTop 0.8s forwards;
   }
   .close-btn:checked ~ .close-icon .close-icon__line::after {
-    background: #fff;
+    background: #dbe9f4;
     -webkit-animation: openBottom 0.8s forwards;
             animation: openBottom 0.8s forwards;
   }

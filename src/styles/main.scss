@@ -5,6 +5,7 @@
 @import './pages/gallery';
 @import './components/galleryItem';
 @import './components/modal';
+@import './variables';
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 }
 
 html, body {
-  background-color: #272727;
+  background-color: $body-background;
 }
 
 body {
