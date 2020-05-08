@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import 'styles/components/layout/header/header';
-@import 'styles/components/layout/header/media';
-@import 'styles/components/layout/header/animations';
-@import 'styles/pages/gallery';
-@import 'styles/components/galleryItem';
-@import 'styles/components/modal';
+@import './components/layout/header/header';
+@import './components/layout/header/media';
+@import './components/layout/header/animations';
+@import './pages/gallery';
+@import './components/galleryItem';
+@import './components/modal';
 
 *, *::before, *::after {
   box-sizing: border-box;
