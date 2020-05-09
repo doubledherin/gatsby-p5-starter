@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Navlink from './navlink'
+import logo from "../../../images/logo.png"
 import "../../../styles/main.scss"
 
 function Header() {
@@ -24,7 +25,7 @@ function Header() {
   return (
     <header className={`main-header ${scrolledClassName}`}>
       <div className="logo">
-        <a href="/">LOGO</a>
+        <img src={logo} alt="Logo" />
       </div>
       <input type="checkbox" className="menu-btn" id="menu-btn" checked={checked} onChange={() => setChecked(!checked)}/>
       <label htmlFor="menu-btn" className="menu-icon">
