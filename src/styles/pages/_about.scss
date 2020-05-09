@@ -1,0 +1,26 @@
+.about-content-container {
+  padding: 0 10vw;
+  margin: 0 auto;
+  .round {
+    width: 400px;
+    height: 400px;
+    float: right;
+    border-radius: 50%;
+    margin: 0 20px 20px;
+  }
+  
+  @media screen and (max-width:800px) {
+    h1 {
+      text-align: center;
+    }
+    .round {
+      width: 300px;
+      height: 300px;
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      display: block !important;
+    }
+  }  
+}
+

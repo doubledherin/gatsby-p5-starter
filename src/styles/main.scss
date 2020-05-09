@@ -3,8 +3,8 @@
 @import './components/layout/header/media';
 @import './components/layout/header/animations';
 @import './pages/gallery';
+@import './pages/about';
 @import './components/galleryItem';
-@import './components/modal';
 @import './variables';
 
 *, *::before, *::after {
@@ -17,9 +17,13 @@ html, body {
   background-color: $body-background;
 }
 
-body {
+body, h1 {
   font-family: 'Montserrat', 'san-serif';
   color: $text-color;
+}
+
+h1 {
+  margin: 40px 0;
 }
 
 .page-container {
