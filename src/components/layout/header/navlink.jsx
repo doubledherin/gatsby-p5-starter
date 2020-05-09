@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from "gatsby"
 
-const NavLink = ({ to, children }) => {
+const NavLink = ({ to, onClick, children }) => {
   return (
     <li className="nav-link">
-      <Link to={to}>{children}</Link>
+      <Link to={to} onClick={onClick}>{children}</Link>
     </li>
   )
 }

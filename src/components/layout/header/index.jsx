@@ -2,12 +2,12 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Navlink from './navlink'
 import { Link } from "gatsby"
 
-import "../../styles/main.scss"
+import "../../../styles/main.scss"
 
-const Header = () => {
+function Header() {
 
   const [ scrolledClassName, setScrolledClassName ] = useState('')
-  const [ displayMobileHeader, setDisplayMobileHeader ] = useState(false)
+  const [ checked, setChecked ] = useState(false)
 
   const handleScroll = useCallback(() => {
     const scrollPosition = window.scrollY
@@ -28,15 +28,15 @@ const Header = () => {
       <div className="logo">
         <a href="/">LOGO</a>
       </div>
-      <input type="checkbox" className="menu-btn" id="menu-btn" />
+      <input type="checkbox" className="menu-btn" id="menu-btn" checked={checked} onChange={() => setChecked(!checked)}/>
       <label htmlFor="menu-btn" className="menu-icon">
         <span className="menu-icon__line"></span>
       </label>
       <ul className="nav-links">
-        <Navlink to="/">Home</Navlink>
-        <Navlink to="/gallery">Gallery</Navlink>
-        <Navlink to="/about">About</Navlink>
-        <Navlink to="/contact">Contact</Navlink>
+        <Navlink to="/" onClick={() => setChecked(!checked)}>Home</Navlink>
+        <Navlink to="/gallery" onClick={() => setChecked(!checked)}>Gallery</Navlink>
+        <Navlink to="/about" onClick={() => setChecked(!checked)}>About</Navlink>
+        <Navlink to="/contact" onClick={() => setChecked(!checked)}>Contact</Navlink>
       </ul>
     </header>
   )
