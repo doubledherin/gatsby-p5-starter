@@ -19,14 +19,11 @@ html, body {
 
 body {
   font-family: 'Montserrat', 'san-serif';
-}
-
-canvas {
-  padding-top: 65px;
+  color: $text-color;
 }
 
 .page-container {
-  width: 80%;
+  padding-top: 65px;
   margin: 0 auto;
 }
 

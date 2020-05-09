@@ -15,12 +15,10 @@ export default function GalleryItemPage( { data } ) {
   if (!isP5(slug)) {
     return (
       <Layout>
-        <div className="page-container">
-          <div className="image">
-            <Img fluid={node.fluid} alt={''} />
-          </div>
-          <div className="text">{''}</div>
+        <div className="image">
+          <Img fluid={node.fluid} alt={''} />
         </div>
+        <div className="text">{''}</div>
       </Layout>
     )
   } else {

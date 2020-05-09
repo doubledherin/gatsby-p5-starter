@@ -5,8 +5,6 @@ import Modal from '../components/modal'
 
 export default () => (
   <Layout>
-    <Modal show={true}>
-      <div>Contact me!</div>
-    </Modal>
+    <div>Contact me!</div>
   </Layout>
 )

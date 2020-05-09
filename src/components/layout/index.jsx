@@ -9,9 +9,9 @@ const Layout = ({ title, children }) => {
     <div className="layout-container">
       <SEO title={title} />
       <Header />
-
-      {children}
-
+      <div className="page-container">
+        {children}
+      </div>
     </div>
   )
 }
