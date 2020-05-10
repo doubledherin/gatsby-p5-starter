@@ -1,0 +1,11 @@
+.contact-content-container {
+  padding: 0 10vw;
+  margin: 0 auto;
+  
+  @media screen and (max-width:800px) {
+    h1 {
+      text-align: center;
+    }
+  }  
+}
+

@@ -8,7 +8,7 @@ const GalleryItem = (props) => {
     <div className="gallery-item-container" onClick={() => window.location = props.slug}>
       <div className="gallery-item">
         <div className="image">
-          <Img fluid={props.fluid} alt={props.alt} />
+          <img src={props.imageSrc} alt={props.alt} />
         </div>
         <div className="text">{props.text}</div>
       </div>

@@ -16,7 +16,7 @@
     height: 100%;
     object-position: 50% 50%;
     cursor: pointer;
-    transition: 2s ease-in-out;
+    transition: .4s ease-in-out;
   }
   .gallery-item:hover .image img {
     transform: scale(1.1);
