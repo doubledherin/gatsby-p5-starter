@@ -1,11 +1,9 @@
 import React from 'react'
-import Img from "gatsby-image/withIEPolyfill"
 
-// TODO: Figure out styling / size of images.
 const GalleryItem = (props) => {
 
   return (
-    <div className="gallery-item-container" onClick={() => window.location = props.slug}>
+    <div className={`gallery-item-container ${props.spanClasses}`} onClick={() => window.location = props.slug}>
       <div className="gallery-item">
         <div className="image">
           <img src={props.imageSrc} alt={props.alt} />

@@ -9,11 +9,23 @@ export default ({ data }) => {
 
   const { allFile: { nodes } } = data
 
+  const spanClasses = [
+    "w-3 h-2",
+    "w-3 h-1",
+    "w-1 h-1",
+    "w-2 h-2",
+    "w-1 h-2",
+    "w-2 h-1",
+    "w-1 h-1",
+    "w-3 h-1",
+    "w-2 h-1"
+  ]
+
   return (
     <Layout>
       <div className="gallery-container">
         { data && nodes && 
-          nodes.map(node => {
+          nodes.map((node, idx) => {
             const { relativePath } = node
             const { originalName } = node.childImageSharp.fluid
             const text = deriveText(originalName)
@@ -28,7 +40,8 @@ export default ({ data }) => {
                 text={text} 
                 width={2} 
                 height={2} 
-                slug={slug} />
+                slug={slug}
+                spanClasses={spanClasses[idx % 9]} />
             )
           })
         }
