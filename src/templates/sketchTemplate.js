@@ -28,6 +28,14 @@ export default function sketch(p) {
 
   }
 
+  p.mouseReleased = () => {
+
+  }
+
+  p.keyPressed = () => {
+    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png');
+  }
+
   p.keyReleased = () => {
     
   }
