@@ -103,11 +103,6 @@ Clicking on any image in the gallery will redirect you to a page with a full-scr
 
 ## 💫 Deployment to Github Pages
 
-You have 2 choices for Github deployment: 
-- Option 1: a github.io path of your subdomain (e.g. `<username>.github.io/<pathPrefix>`), or
-- Option 2: your github.io subdomain (e.g. `<username>.github.io`) 
-
-### Option 1: Deployment to a github.io path
 1. Create a local `gh-pages` branch and push it to Github, then return to the `master` branch.
 ```sh
 git checkout -b gh-pages
@@ -116,12 +111,6 @@ git checkout master
 ```
 2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't, set it to `gh-pages`).
 3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
-
-### Option 2: (Not currently working) Deployment to your github.io subdomain
-1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page.
-2. In your `package.json`, under `scripts`, change the entry for `"deploy"` by removing `--prefix-paths` and by adding `-b master` to the end. It should look like this: `"deploy": "gatsby build && gh-pages -d public -b master"`
-3. Run `npm run deploy` and  *a few minutes after the deploy completes*, you should see the site at `username.github.io`.
-4. If you'd like, remove the `pathPrefix` entry in the `gatsby-config.js` file, as it's only needed for deployment to a specific path.
 
 ## 💫 Deployment to Other Nice Places
 If you're interested in hosting your  site somewhere other than Github Pages, check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/). There are tons of options.
