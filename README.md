@@ -33,6 +33,9 @@ You need Git in order to use Gatsby. If you don't have Git, get it using [**thes
 - ***Gatsby CLI***
 You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
+***NOTE! *** 
+If you already have gatsby-cli, and you're seeing an error related to a missing dependency called `ink`, you need to update your gatsby-cli by running `npm update gatsby`. More information on this issue can be found [here](https://github.com/gatsbyjs/gatsby/issues/22109).
+
 ### 1. Create a Gatsby site.
 
 *Don't just clone this repo.* 
@@ -47,7 +50,7 @@ This will create a new Gatsby project based on a clone of this repo.
 
 ### 2. Make some config changes.
 
-`cd` into your repo's directory. You'll see that Git is already initialized.
+`cd` into your repo's directory. You'll see that Git is already initialized. Don't worry about setting up your repo on Github yet -- we'll get to that in Step 4.
 
 In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
 
