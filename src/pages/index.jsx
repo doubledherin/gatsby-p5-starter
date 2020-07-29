@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SketchWrapper from '../components/sketchWrapper'
-import sketch from '../scripts/sketches/P_2_2_3_01'
+import sketch from '../scripts/sketches/fissures'
 
 const IndexPage = () => {
   return (

@@ -1,4 +1,4 @@
-// P_2_2_1_01
+// P_2_0_03
 //
 // Generative Gestaltung – Creative Coding im Web
 // ISBN: 978-3-87439-902-9, First Edition, Hermann Schmidt, Mainz, 2018
@@ -18,36 +18,24 @@
 // limitations under the License.
 
 /**
- * draw the path of a stupid agent
+ * drawing with a changing shape by draging the mouse.
  *
  * MOUSE
- * position x          : drawing speed
+ * position x          : length
+ * position y          : thickness and number of lines
+ * drag                : draw
  *
  * KEYS
- * DEL/BACKSPACE       : clear display
+ * 1-3                 : stroke color
+ * del, backspace      : erase
  * s                   : save png
  */
 'use strict'
-
 export default function sketch(p) {
 
   // ~~~~~~ Initialize variables ~~~~~~~~~
+  var strokeColor
 
-  var NORTH = 0
-  var NORTHEAST = 1
-  var EAST = 2
-  var SOUTHEAST = 3
-  var SOUTH = 4
-  var SOUTHWEST = 5
-  var WEST = 6
-  var NORTHWEST = 7
-  var direction
-  
-  var stepSize = 1
-  var diameter = 1
-  
-  var posX
-  var posY
   // ~~~~~~ React lifecycle methods ~~~~~~
   p.preload = () => {
 
@@ -55,48 +43,35 @@ export default function sketch(p) {
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight)
-    p.background(255)
-    p.noStroke()
-    p.fill(0, 40)
-  
-    posX = p.width / 2
-    posY = p.height / 2
+  p.createCanvas(720, 720)
+  p.background(255)
+  p.colorMode(p.HSB, 360, 100, 100, 100)
+  p.noFill()
+  p.strokeWeight(2)
+  strokeColor = p.color(0, 10)
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    for (var i = 0; i <= p.mouseX; i++) {
-      direction = p.int(p.random(0, 8))
+    if (p.mouseIsPressed && p.mouseButton == p.LEFT) {
+      p.push()
+      p.translate(p.width / 2, p.height / 2)
   
-      if (direction == NORTH) {
-        posY -= stepSize
-      } else if (direction == NORTHEAST) {
-        posX += stepSize
-        posY -= stepSize
-      } else if (direction == EAST) {
-        posX += stepSize
-      } else if (direction == SOUTHEAST) {
-        posX += stepSize
-        posY += stepSize
-      } else if (direction == SOUTH) {
-        posY += stepSize
-      } else if (direction == SOUTHWEST) {
-        posX -= stepSize
-        posY += stepSize
-      } else if (direction == WEST) {
-        posX -= stepSize
-      } else if (direction == NORTHWEST) {
-        posX -= stepSize
-        posY -= stepSize
+      var circleResolution = p.int(p.map(p.mouseY + 100, 0, p.height, 2, 10))
+      var radius = p.mouseX - p.width / 2
+      var angle = p.TAU / circleResolution
+  
+      p.stroke(strokeColor)
+  
+      p.beginShape()
+      for (var i = 0; i <= circleResolution; i++) {
+        var x = p.cos(angle * i) * radius
+        var y = p.sin(angle * i) * radius
+        p.vertex(x, y)
       }
+      p.endShape()
   
-      if (posX > p.width) posX = 0
-      if (posX < 0) posX = p.width
-      if (posY < 0) posY = p.height
-      if (posY > p.height) posY = 0
-  
-      p.ellipse(posX + stepSize / 2, posY + stepSize / 2, diameter, diameter)
+      p.pop()
     }
   }
 
@@ -114,7 +89,11 @@ export default function sketch(p) {
   }
 
   p.keyReleased = () => {
-    if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.clear()
+    if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.background(0, 0, 100)
+  
+    if (p.key == '1') strokeColor = p.color(0, 10)
+    if (p.key == '2') strokeColor = p.color(192, 100, 64, 10)
+    if (p.key == '3') strokeColor = p.color(52, 100, 71, 10)
   }
 
   // ~~~~~~ Helper functions ~~~~~~~~~

@@ -70,7 +70,7 @@ export default function sketch(p) {
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight)
-    p.colorMode(p.HSB, 360, 100, 100, 100)
+    p.colorMode(p.HSB, 360, 50, 50, 100)
     p.noFill()
     p.strokeWeight(1)
   
@@ -95,7 +95,7 @@ export default function sketch(p) {
 
   // ~~~~~~ Other commonly used p5 methods
   p.mousePressed = () => {
-    newShape = new Shape(p.color(p.random(360), 80, 60, 50))
+    newShape = new Shape(p.color(p.random(360), 180, 160))
     newShape.addPos(p.mouseX, p.mouseY)
   
   }
