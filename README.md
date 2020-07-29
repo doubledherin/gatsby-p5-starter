@@ -7,18 +7,16 @@
   Gatsby p5.js Starter
 </h1>
 
-This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js.
+This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
 
 ## TODO
 - [ ] Fix Github Pages subdomain deployment
 - [ ] Add instructions on adding your own p5.js sketch
 
 ## ✨ Features
-
-- [p5.js](https://p5js.org/)
-- [Emotion CSS Library](https://emotion.sh/docs/introduction)
-
-Note that this does not use `react-p5-wrapper` -- no need.
+- [gatsby] (https://www.gatsbyjs.org/)
+- responsive css-grid gallery with [Sass](https://sass-lang.com/)
+- React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- no need.
 
 ## 🚀 Getting Started
 
