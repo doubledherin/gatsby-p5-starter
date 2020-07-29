@@ -74,30 +74,35 @@ Push your local `master` branch to the remote:
 git push origin master
 ```
 
-## Customizations
-
-### Typography
-This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) with the Bootstrap theme. To choose a different theme or to customize your own theme, follow [these Typography.js docs](http://kyleamathews.github.io/typography.js/) or these [Gatsy-Typography ones](https://www.gatsbyjs.org/docs/typography-js/).
-
 ## 💫 Deployment
 This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plenty of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
 1. If you don't already have a Heroku account, create one for free [here](https://signup.heroku.com/).
 2. Make sure you're logged in and go to your dashboard, at https://dashboard.heroku.com/apps.
 3. In the top right corner, click "New", then "Create New App".
-4. Enter a name for your app and choose a region. Unless you need it (unlikely) ignore the 'Add to pipeline' option.
+4. Enter a name for your app and choose a region. Ignore the 'Add to pipeline' option unless you need it (unlikely). Click "Create app".
 5. If you don't have it already, download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). If you're not sure, type `heroku -v` on the command line. If a version is printed to the terminal, you have the Heroku CLI. If not, you don't.
 6. Once you have the Heroku CLI, you should be able to log in to Heroku on the command line. Do that by running `heroku login`
-7. Add a heroku remote for your app `heroku git:remote -a <your-heroku-app-name>`
-7. Set the heroku/node.js and heroku-buildpack-static buildpacks on your application: Run `heroku buildpacks:set heroku/nodejs` and then `heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git`. There is already a static.json file in your repo. Heroku will automatically detect and run the build script from your package.json.
-8. Heroku can only deploy from the master branch. Run `git push heroku master` to deploy what's on your local `master` branch; run `git push heroku <local-branch-name>:master` to deploy what's on your local branch. 
+7. Add a heroku remote for your app: `heroku git:remote -a <your-heroku-app-name>`
+8. Set the heroku/node.js and heroku-buildpack-static buildpacks on your application:
+
+```
+heroku buildpacks:set heroku/nodejs
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git
+```
+
+Heroku will automatically detect and run the build script from your package.json.
+
+9. Heroku can only deploy from the master branch. Run `git push heroku master` to deploy what's on your local `master` branch; run `git push heroku <local-branch-name>:master` to deploy what's on your local branch. 
 
 Once it completes, your app should be deployed to your-app-name.herokuapp.com. 
 
-Heroku will automatically detect and run the build script from your package.json
+That should be all you need, but more information on deploying to Heroku can be found [here](https://www.gatsbyjs.org/docs/deploying-to-heroku/).
 
-That should be all you need, but more information on deploying to Heroku can be found [here](https://www.gatsbyjs.org/docs/deploying-to-heroku/.)
+## Customizations
 
+### Typography
+This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) with the Bootstrap theme. To choose a different theme or to customize your own theme, follow [these Typography.js docs](http://kyleamathews.github.io/typography.js/) or these [Gatbsy-Typography ones](https://www.gatsbyjs.org/docs/typography-js/).
 
 ### Landing Page
 TO DO
