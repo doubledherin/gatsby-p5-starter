@@ -79,16 +79,6 @@ git push origin master
 ### Typography
 This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) with the Bootstrap theme. To choose a different theme or to customize your own theme, follow [these Typography.js docs](http://kyleamathews.github.io/typography.js/) or these [Gatsy-Typography ones](https://www.gatsbyjs.org/docs/typography-js/).
 
-### Landing Page
-TO DO
-
-### Gallery Page
-The images in the Gallery are automatically optimized for fluid responsive rendering using the `gatsby-image`, `gatsby-plugin-sharp`, and `gatsby-transformer-sharp`. They are dynamically rendered via GraphQL queries enabled by the `gatsby-source-filesystem` plugin.
-
-Any image in `src/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
-
-Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
-
 ## 💫 Deployment
 This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plenty of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
@@ -107,6 +97,17 @@ Once it completes, your app should be deployed to your-app-name.herokuapp.com.
 Heroku will automatically detect and run the build script from your package.json
 
 That should be all you need, but more information on deploying to Heroku can be found [here](https://www.gatsbyjs.org/docs/deploying-to-heroku/.)
+
+
+### Landing Page
+TO DO
+
+### Gallery Page
+The images in the Gallery are automatically optimized for fluid responsive rendering using the `gatsby-image`, `gatsby-plugin-sharp`, and `gatsby-transformer-sharp`. They are dynamically rendered via GraphQL queries enabled by the `gatsby-source-filesystem` plugin.
+
+Any image in `src/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
+
+Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
 
 ## 🎓 Learning Gatsby
 
