@@ -46,15 +46,7 @@ gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter
 
 This will create a new Gatsby project based on a clone of this repo.
 
-### 2. Make some config changes.
-
-`cd` into your repo's directory. You'll see that Git is already initialized. Don't worry about setting up your repo on Github yet -- we'll get to that in Step 4.
-
-In the `config.js` file, change the `pathPrefix` entry to match the name of your repo, prefaced with `/`. (By default, the path prefix is set to `/my-gatsby-p5-site`. If your repo name is `foo`, change the path prefix to `/foo`.)
-
-Also change `siteUrl` to replace `your-username` with your Github username. For example if your username is `foobar`, the `siteUrl` should be set to `'https://foobar.github.io'`.
-
-### 3. 🔥 Fire it up!
+### 2. 🔥 Fire it up!
 
 ```sh
 gatsby develop
@@ -68,7 +60,7 @@ Notice that you also have hot reloading out of the box: make an edit to `src/pag
 
 🔥 Hot reloading is hot hot hot. 🔥
 
-### 4. Set up your Github repo.
+### 3. Set up your Github repo.
 
 Create a new repository on Github and then add it as the origin remote locally with 
 
