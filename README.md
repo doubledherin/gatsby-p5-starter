@@ -99,25 +99,23 @@ Any image in `src/images/gallery` will appear on the Gallery page, and the text 
 
 Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
 
-## 💫 Deployment to GitHub Pages subdomain at github.io
+## 💫 Deployment
+This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plent of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
-*Please note* that until I get resolution on [this issue](https://github.com/gatsbyjs/gatsby/issues/26048) it is not possible for apps spawned from this start to deploy to a path on Github Pages (i.e. <username>.github.io/<some-path>), only to a subdomain (<username>.github.io).
+1. If you don't already have a Heroku account, create one for free [here](https://signup.heroku.com/).
+2. Make sure you're logged in and go to your dashboard, at https://dashboard.heroku.com/apps.
+3. In the top right corner, click "New", then "Create New App".
+4. Enter a name for your app and choose a region. Unless you need it (unlikely) ignore the 'Add to pipeline' option.
+5. If you don't have it already, download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). If you're not sure, type `heroku -v` on the command line. If a version is printed to the terminal, you have the Heroku CLI. If not, you don't.
+6. Once you have the Heroku CLI, you should be able to log in to Heroku on the command line. Do that by running `heroku login`
+7. Set the heroku/node.js and heroku-buildpack-static buildpacks on your application: Run `heroku buildpacks:set heroku/nodejs` and then `heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git`. There is already a static.json file in your repo. Heroku will automatically detect and run the build script from your package.json.
+8. Heroku can only deploy from the master branch. Run `git push heroku master` to deploy what's on your local `master` branch; run `git push heroku <local-branch-name>:master` to deploy what's on your local branch. 
 
-1. Create a local `gh-pages` branch and push it to Github, then return to the `master` branch.
-```sh
-git checkout -b gh-pages
-git push origin gh-pages
-git checkout master
-```
-2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (it should be once you push your local `gh-pages` branch, but if it isn't, set it to `gh-pages`).
+Once it completes, your app should be deployed to <your-app-name>.herokuapp.com. 
 
-3. Run `npm run deploy-gh` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io`. (Note that the deploy runs `gatsby-clean` for good measure, so if you have your app running locally, it'll crash because of the clean, and you'll need to restart it.)
+Heroku will automatically detect and run the build script from your package.json
 
-## 💫 Deployment to Heroku
-
-
-## 💫 Deployment to Other Nice Places
-If you're interested in hosting your  site somewhere other than Github Pages, check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/). There are tons of options.
+That should be all you need, but more information on deploying to Heroku can be found [here](https://www.gatsbyjs.org/docs/deploying-to-heroku/.)
 
 ## 🎓 Learning Gatsby
 
