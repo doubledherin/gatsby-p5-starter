@@ -36,7 +36,6 @@
     "build": "DEBUG=gatsby* gatsby build --verbose",
     "serve": "DEBUG=gatsby* gatsby serve --verbose",
     "test": "echo \"Error: no test specified -- https://gatsby.app/unit-testing/\" && exit 1",
-    "deploy-heroku": "gatsby clean && gatsby build",
     "deploy-gh": "gatsby clean && gatsby build && gh-pages -d public"
   },
   "dependencies": {
