@@ -9,7 +9,6 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  "ignorePatterns": ["p5.min.js", "eslintrc.js"],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
