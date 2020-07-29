@@ -1,8 +1,5 @@
-import React from "react"
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import GalleryItem from '../components/galleryItem'
 import { galleryPathPrefix } from '../constants'
 
 export default ({ data }) => {

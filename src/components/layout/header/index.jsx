@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import Navlink from './navlink'
+import { useState, useEffect, useCallback } from 'react'
 import logo from "../../../images/logo.png"
 import "../../../styles/main.scss"
 

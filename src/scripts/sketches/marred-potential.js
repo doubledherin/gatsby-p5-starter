@@ -33,7 +33,7 @@ export default function marredPotential(p) {
   p.draw = () => {
     for (let i = 0; i < hypotrochoids.length; i++) {
       let [fixedCircleRadius, rollingCircleRadius, h] = hypotrochoids[i]
-      hypotrochoid(fixedCircleRadius, rollingCircleRadius, h);
+      hypotrochoid(fixedCircleRadius, rollingCircleRadius, h)
     }
   }
 
@@ -51,7 +51,7 @@ export default function marredPotential(p) {
     let x = ((fixedCircleRadius - rollingCircleRadius) * Math.cos(angle)) + (h * Math.cos(((fixedCircleRadius - rollingCircleRadius) / rollingCircleRadius) * angle)) + 300
     let y = ((fixedCircleRadius - rollingCircleRadius) * Math.sin(angle)) - (h * Math.sin(((fixedCircleRadius - rollingCircleRadius) / rollingCircleRadius) * angle)) + 300
     p.ellipse(x, y, 1, 1)
-    angle += 0.00111;
+    angle += 0.00111
   }
   // ~~~~~~ Classes ~~~~~~~~~~~~
   

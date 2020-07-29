@@ -26,14 +26,14 @@
  * KEYS
  * s                   : save png
  */
-'use strict';
+'use strict'
 
 export default function sketch(p) {
 
   // ~~~~~~ Initialize variables ~~~~~~~~~
 
-  var stepX;
-  var stepY;
+  var stepX
+  var stepY
   // ~~~~~~ React lifecycle methods ~~~~~~
   p.preload = () => {
 
@@ -41,20 +41,20 @@ export default function sketch(p) {
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    p.createCanvas(800, 800);
-    p.noStroke();
-    p.colorMode(p.HSB, p.width, p.height, 100);
+    p.createCanvas(800, 800)
+    p.noStroke()
+    p.colorMode(p.HSB, p.width, p.height, 100)
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    stepX = p.mouseX + 2;
-    stepY = p.mouseY + 2;
+    stepX = p.mouseX + 2
+    stepY = p.mouseY + 2
   
     for (var gridY = 0; gridY < p.height; gridY += stepY) {
       for (var gridX = 0; gridX < p.width; gridX += stepX) {
-        p.fill(gridX, p.height - gridY, 100);
-        p.rect(gridX, gridY, stepX, stepY);
+        p.fill(gridX, p.height - gridY, 100)
+        p.rect(gridX, gridY, stepX, stepY)
       }
     }
   }
@@ -65,7 +65,7 @@ export default function sketch(p) {
   }
 
   p.keyPressed = () => {
-    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png');
+    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png')
   }
 
   p.keyReleased = () => {

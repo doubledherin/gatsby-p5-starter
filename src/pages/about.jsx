@@ -1,8 +1,4 @@
-import React from "react"
 import { graphql } from 'gatsby'
-import Img from "gatsby-image/withIEPolyfill"
-
-import Layout from '../components/layout'
 
 export default ({ data }) => {
   const { allFile: { nodes } } = data

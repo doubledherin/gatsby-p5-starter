@@ -28,14 +28,14 @@
  * 1-5                 : number of segments
  * s                   : save png
  */
-'use strict';
+'use strict'
 
 export default function sketch(p) {
 
   // ~~~~~~ Initialize variables ~~~~~~~~~
 
-  var segmentCount = 360;
-  var radius = 300;
+  var segmentCount = 360
+  var radius = 300
   
   // ~~~~~~ React lifecycle methods ~~~~~~
   p.preload = () => {
@@ -44,28 +44,28 @@ export default function sketch(p) {
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    p.createCanvas(800, 800);
-    p.noStroke();
+    p.createCanvas(800, 800)
+    p.noStroke()
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    p.colorMode(p.HSB, 360, p.width, p.height);
-    p.background(360, 0, p.height);
+    p.colorMode(p.HSB, 360, p.width, p.height)
+    p.background(360, 0, p.height)
   
-    var angleStep = 360 / segmentCount;
+    var angleStep = 360 / segmentCount
   
-    p.beginShape(p.TRIANGLE_FAN);
-    p.vertex(p.width / 2, p.height / 2);
+    p.beginShape(p.TRIANGLE_FAN)
+    p.vertex(p.width / 2, p.height / 2)
   
     for (var angle = 0; angle <= 360; angle += angleStep) {
-      var vx = p.width / 2 + p.cos(p.radians(angle)) * radius;
-      var vy = p.height / 2 + p.sin(p.radians(angle)) * radius;
-      p.vertex(vx, vy);
-      p.fill(angle, p.mouseX, p.mouseY);
+      var vx = p.width / 2 + p.cos(p.radians(angle)) * radius
+      var vy = p.height / 2 + p.sin(p.radians(angle)) * radius
+      p.vertex(vx, vy)
+      p.fill(angle, p.mouseX, p.mouseY)
     }
   
-    p.endShape();
+    p.endShape()
   }
 
   // ~~~~~~ Other commonly used p5 methods
@@ -74,25 +74,25 @@ export default function sketch(p) {
   }
 
   p.keyPressed = () => {
-    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png');
+    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png')
 
 
   switch (p.key) {
     case '1':
-      segmentCount = 360;
-      break;
+      segmentCount = 360
+      break
     case '2':
-      segmentCount = 45;
-      break;
+      segmentCount = 45
+      break
     case '3':
-      segmentCount = 24;
-      break;
+      segmentCount = 24
+      break
     case '4':
-      segmentCount = 12;
-      break;
+      segmentCount = 12
+      break
     case '5':
-      segmentCount = 6;
-      break;
+      segmentCount = 6
+      break
     }
   }
 

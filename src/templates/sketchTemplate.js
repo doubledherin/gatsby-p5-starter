@@ -33,7 +33,7 @@ export default function sketch(p) {
   }
 
   p.keyPressed = () => {
-    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png');
+    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png')
   }
 
   p.keyReleased = () => {

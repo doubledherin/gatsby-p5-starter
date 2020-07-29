@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image/withIEPolyfill"
 
-import Layout from "../components/layout"
-import SketchWrapper from '../components/sketchWrapper'
+import Layout from "../components/layout"               // eslint-disable-line
+import SketchWrapper from '../components/sketchWrapper' // eslint-disable-line
 
 export default function GalleryItemPage( { data } ) {
 
@@ -11,7 +10,7 @@ export default function GalleryItemPage( { data } ) {
 
   const node = data.allImageSharp.nodes[0]
   const slug = node && node.fields ? node.fields.slug : ''
-
+  
   if (!isP5(slug)) {
     return (
       <Layout>

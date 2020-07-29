@@ -4,11 +4,12 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
+  extends: "eslint:recommended",
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  "ignorePatterns": ["p5.min.js"],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -17,8 +18,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['react', 'react-hooks'],
   rules: {
-    'prettier/prettier': 'error',
+    semi: [2, "never"]
   },
 };

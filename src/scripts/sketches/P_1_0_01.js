@@ -27,7 +27,7 @@
  * KEYS
  * s                   : save png
  */
-'use strict';
+'use strict'
 
 export default function sketch(p) {
 
@@ -40,20 +40,20 @@ export default function sketch(p) {
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    p.createCanvas(720, 720);
-    p.noCursor();
+    p.createCanvas(720, 720)
+    p.noCursor()
   
-    p.colorMode(p.HSB, 360, 100, 100);
-    p.rectMode(p.CENTER);
-    p.noStroke();
+    p.colorMode(p.HSB, 360, 100, 100)
+    p.rectMode(p.CENTER)
+    p.noStroke()
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    p.background(p.mouseY / 2, 100, 100);
+    p.background(p.mouseY / 2, 100, 100)
 
-    p.fill(360 - p.mouseY / 2, 100, 100);
-    p.rect(360, 360, p.mouseX + 1, p.mouseX + 1);
+    p.fill(360 - p.mouseY / 2, 100, 100)
+    p.rect(360, 360, p.mouseX + 1, p.mouseX + 1)
   }
 
   // ~~~~~~ Other commonly used p5 methods
@@ -66,7 +66,7 @@ export default function sketch(p) {
   }
 
   p.keyPressed = () => {
-    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png');
+    if (p.key == 's' || p.key == 'S') p.saveCanvas(Date.now().toString(), 'png')
   }
 
   // ~~~~~~ Helper functions ~~~~~~~~~
