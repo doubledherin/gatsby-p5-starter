@@ -47,7 +47,7 @@ gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter
 This will create a new Gatsby project based on a clone of this repo.
 
 ### 2. 🔥 Fire it up!
-
+`cd` into the new project directory that was created, then run
 ```sh
 gatsby develop
 ```
@@ -68,11 +68,9 @@ Create a new repository on Github and then add it as the origin remote locally w
 git remote add origin <url-of-your-github-repo>
 ```
 
-Commit your config changes and push:
+Push your local `master` branch to the remote:
 
 ```sh
-git add config.js
-git commit -m "Initial commit"
 git push origin master
 ```
 
