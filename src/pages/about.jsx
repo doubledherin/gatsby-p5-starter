@@ -1,6 +1,11 @@
+import React from "react"
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+import Img from "gatsby-image/withIEPolyfill"
 
-export default ({ data }) => {
+import Layout from '../components/layout'
+
+const About = ({ data }) => {
   const { allFile: { nodes } } = data
 
   return (
@@ -31,3 +36,9 @@ export const query = graphql`
     }
   }  
 `
+
+About.propTypes = {
+  data: PropTypes.object
+}
+
+export default About

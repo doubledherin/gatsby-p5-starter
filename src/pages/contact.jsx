@@ -1,4 +1,8 @@
-export default () => {
+import React from "react"
+
+import Layout from '../components/layout'
+
+const Contact = () => {
 
   return (
     <Layout>
@@ -9,3 +13,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Contact

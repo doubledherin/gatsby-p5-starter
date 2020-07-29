@@ -19,7 +19,7 @@ GalleryItem.propTypes = {
   alt: PropTypes.string,
   imageSrc: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  spanClasses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  spanClasses: PropTypes.string.isRequired,
   text: PropTypes.string
 }
 

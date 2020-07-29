@@ -42,7 +42,7 @@ const Gallery = ({ data }) => {
                 width={2} 
                 height={2} 
                 slug={slug}
-                spanClasses={[spanClasses[idx % 9]]} />
+                spanClasses={spanClasses[idx % 9]} />
             )
           })
         }
