@@ -10,13 +10,13 @@
 This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
 
 ## TODO
-- [ ] Fix Github Pages subdomain deployment
 - [ ] Add instructions on adding your own p5.js sketch
 
 ## ✨ Features
 - [gatsby] (https://www.gatsbyjs.org/)
 - responsive css-grid gallery with [Sass](https://sass-lang.com/)
 - React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- no need.
+- [Typography.js](http://kyleamathews.github.io/typography.js/)
 
 ## 🚀 Getting Started
 
@@ -99,7 +99,9 @@ Any image in `src/images/gallery` will appear on the Gallery page, and the text 
 
 Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
 
-## 💫 Deployment to Github Pages
+## 💫 Deployment to GitHub Pages subdomain at github.io
+
+*Please note* that until I get resolution on [this issue](https://github.com/gatsbyjs/gatsby/issues/26048) it is not possible for apps spawned from this start to deploy to a path on Github Pages (i.e. <username>.github.io/<some-path>), only to a subdomain (<username>.github.io).
 
 1. Create a local `gh-pages` branch and push it to Github, then return to the `master` branch.
 ```sh
@@ -107,8 +109,12 @@ git checkout -b gh-pages
 git push origin gh-pages
 git checkout master
 ```
-2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (if it isn't, set it to `gh-pages`).
-3. Run `npm run deploy` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io/<pathPrefix>`.
+2. In your Github repo, click Settings, then scroll all the way down to **Github Pages**. Confirm that your source page for Github Pages is set to `gh-pages` (it should be once you push your local `gh-pages` branch, but if it isn't, set it to `gh-pages`).
+
+3. Run `npm run deploy-gh` and *a few minutes after the deploy completes*, you should see the site at `<username>.github.io`. (Note that the deploy runs `gatsby-clean` for good measure, so if you have your app running locally, it'll crash because of the clean, and you'll need to restart it.)
+
+## 💫 Deployment to Heroku
+
 
 ## 💫 Deployment to Other Nice Places
 If you're interested in hosting your  site somewhere other than Github Pages, check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/). There are tons of options.
