@@ -54,15 +54,17 @@
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
     p.createCanvas(800, 800)
+    p.background(0, 204, 204)
     tileWidth = p.width / tileCountX
     tileHeight = p.height / tileCountY
     p.noFill()
-    p.stroke(0, 128)
+    p.stroke(255, 150, 50)
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
-    p.background(255)
+    p.background(0, 204, 204)
+
     p.randomSeed(actRandomSeed)
   
     p.translate(tileWidth / 2, tileHeight / 2)

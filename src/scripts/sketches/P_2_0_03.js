@@ -34,7 +34,7 @@
  export default function sketch(p) {
 
   // ~~~~~~ Initialize variables ~~~~~~~~~
-
+  var strokeColor;
   // ~~~~~~ React lifecycle methods ~~~~~~
   p.preload = () => {
 
@@ -42,34 +42,36 @@
 
   // ~~~~~~ Setup ~~~~~~
   p.setup = () => {
-    p.createCanvas(720, 720)
-    p.noFill()
+    p.createCanvas(720, 720);
     p.background(255)
-    p.strokeWeight(2)
-    p.stroke(0, 25)
+    p.colorMode(p.HSB, 360, 100, 100, 100);
+    p.noFill();
+    p.strokeWeight(2);
+    strokeColor = p.color(0, 10);
   }
 
   // ~~~~~~ Draw ~~~~~~
   p.draw = () => {
     if (p.mouseIsPressed && p.mouseButton == p.LEFT) {
-      p.push()
-      p.translate(p.width / 2, p.height / 2)
+      p.push();
+      p.translate(p.width / 2, p.height / 2);
   
-      var circleResolution = p.int(p.map(p.mouseY + 100, 0, p.height, 2, 10))
-      var radius = p.mouseX - p.width / 2
-      var angle = p.TAU / circleResolution
+      var circleResolution = p.int(p.map(p.mouseY + 100, 0, p.height, 2, 10));
+      var radius = p.mouseX - p.width / 2;
+      var angle = p.TAU / circleResolution;
   
-      p.beginShape()
+      p.stroke(strokeColor);
+  
+      p.beginShape();
       for (var i = 0; i <= circleResolution; i++) {
-        var x = p.cos(angle * i) * radius
-        var y = p.sin(angle * i) * radius
-        p.vertex(x, y)
+        var x = p.cos(angle * i) * radius;
+        var y = p.sin(angle * i) * radius;
+        p.vertex(x, y);
       }
-      p.endShape()
+      p.endShape();
   
-      p.pop()
-    }
-  }
+      p.pop();
+    }  }
 
   // ~~~~~~ Other commonly used p5 methods
   p.mousePressed = () => {
@@ -85,7 +87,12 @@
   }
 
   p.keyReleased = () => {
-    if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.background(255)  
+    if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.background(0, 0, 100);
+  
+    if (p.key == '1') strokeColor = p.color(0, 10);
+    if (p.key == '2') strokeColor = p.color(192, 100, 64, 10);
+    if (p.key == '3') strokeColor = p.color(52, 100, 71, 10);
+   
   }
 
   // ~~~~~~ Helper functions ~~~~~~~~~
