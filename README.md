@@ -13,7 +13,7 @@ This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js. View a live v
 - [ ] Add instructions on adding your own p5.js sketch
 
 ## ✨ Features
-- [gatsby] (https://www.gatsbyjs.org/)
+- [gatsby](https://www.gatsbyjs.org/)
 - responsive css-grid gallery with [Sass](https://sass-lang.com/)
 - React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- no need.
 - [Typography.js](http://kyleamathews.github.io/typography.js/)
@@ -31,7 +31,7 @@ You need Git in order to use Gatsby. If you don't have Git, get it using [**thes
 - ***Gatsby CLI***
 You'll need to install this node.js package globally, with `sudo npm install -g gatsby-cli`. Enter your password when prompted. Once it's finished installing, view the available commands by running `gatsby --help`.
 
-***NOTE! *** 
+*NOTE!* 
 If you already have gatsby-cli, and you're seeing an error related to a missing dependency called `ink`, you need to update your gatsby-cli by running `npm update gatsby`. More information on this issue can be found [here](https://github.com/gatsbyjs/gatsby/issues/22109).
 
 ### 1. Create a Gatsby site.
@@ -100,7 +100,7 @@ Any image in `src/images/gallery` will appear on the Gallery page, and the text 
 Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
 
 ## 💫 Deployment
-This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plent of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
+This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plenty of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
 1. If you don't already have a Heroku account, create one for free [here](https://signup.heroku.com/).
 2. Make sure you're logged in and go to your dashboard, at https://dashboard.heroku.com/apps.
@@ -111,7 +111,7 @@ This starter has instructions on deployment to Heroku, but if you're interested 
 7. Set the heroku/node.js and heroku-buildpack-static buildpacks on your application: Run `heroku buildpacks:set heroku/nodejs` and then `heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git`. There is already a static.json file in your repo. Heroku will automatically detect and run the build script from your package.json.
 8. Heroku can only deploy from the master branch. Run `git push heroku master` to deploy what's on your local `master` branch; run `git push heroku <local-branch-name>:master` to deploy what's on your local branch. 
 
-Once it completes, your app should be deployed to <your-app-name>.herokuapp.com. 
+Once it completes, your app should be deployed to your-app-name.herokuapp.com. 
 
 Heroku will automatically detect and run the build script from your package.json
 
