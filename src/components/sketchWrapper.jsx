@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import p5 from '../scripts/p5.min'
 
 class SketchWrapper extends Component {
@@ -24,6 +25,10 @@ class SketchWrapper extends Component {
   render() {
     return <div ref={this.sketchRef} />
   }
+}
+
+SketchWrapper.propTypes = {
+  sketch: PropTypes.func.isRequired
 }
 
 export default SketchWrapper
