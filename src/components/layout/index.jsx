@@ -1,4 +1,8 @@
+import React from 'react'
 import PropTypes from 'prop-types'
+
+import Header from './header'
+import SEO from './seo'
 
 const Layout = ({ title, children }) => {
   return (
@@ -14,6 +18,7 @@ const Layout = ({ title, children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string
 }
 
 export default Layout

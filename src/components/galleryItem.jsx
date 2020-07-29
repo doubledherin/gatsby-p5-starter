@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 const GalleryItem = (props) => {
 
   return (
@@ -10,6 +13,14 @@ const GalleryItem = (props) => {
       </div>
     </div>
   )
+}
+
+GalleryItem.propTypes = {
+  alt: PropTypes.string,
+  imageSrc: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  spanClasses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  text: PropTypes.string
 }
 
 export default GalleryItem

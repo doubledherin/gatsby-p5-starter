@@ -1,8 +1,12 @@
+import React from "react"
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
+import Layout from '../components/layout'
+import GalleryItem from '../components/galleryItem'
 import { galleryPathPrefix } from '../constants'
 
-export default ({ data }) => {
+const Gallery = ({ data }) => {
 
   const { allFile: { nodes } } = data
 
@@ -76,3 +80,9 @@ export const query = graphql`
     }
   }  
 `
+
+Gallery.propTypes = {
+  data: PropTypes.object
+}
+
+export default Gallery

@@ -4,12 +4,12 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: "eslint:recommended",
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  "ignorePatterns": ["p5.min.js"],
+  "ignorePatterns": ["p5.min.js", ".eslintrc.js"],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
@@ -20,6 +20,25 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks'],
   rules: {
-    semi: [2, "never"]
+    semi: [2, "never"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
   },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53"
+    },
+    "propWrapperFunctions": [
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"},
+        {"property": "myFavoriteWrapper"}
+    ],
+    "linkComponents": [
+      "Hyperlink",
+      {"name": "Link", "linkAttribute": "to"}
+    ]
+  }
 };
