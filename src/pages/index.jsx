@@ -2,12 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SketchWrapper from '../components/sketchWrapper'
-import slinky from '../scripts/sketches/slinky'
+import sketch from '../scripts/sketches/P_2_2_3_01'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SketchWrapper sketch={slinky}/>
+      <SketchWrapper sketch={sketch}/>
     </Layout>
   )
 }
