@@ -1,5 +1,6 @@
 .env
 .env*
+*.log
 public/
 .cache/
 .DS_Store
