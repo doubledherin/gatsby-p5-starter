@@ -16,4 +16,5 @@ node_modules/
 .nvmrc
 .prettierrc.js
 .yarn-integrity
+.vscode
 
