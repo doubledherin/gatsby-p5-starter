@@ -10,7 +10,7 @@
 This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
 
 ## TODO
-- [ ] Add instructions on adding your own p5.js sketch
+- [x] Add instructions on adding your own p5.js sketch
 - [ ] Add tests that all gallery images have sketches and all sketches have gallery images
 
 ## ✨ Features
@@ -74,11 +74,11 @@ Push your local `master` branch to the remote:
 ```sh
 git push origin master
 ```
-### 4. Swap in your own content.
+## Add Your Own Content
 
-#### How to Prepare Your p5.js Sketch for This Site
+### How to Prepare Your p5.js Sketch for This Site
 
-##### TL;DR
+#### TL;DR
 1. Copy [this sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) and paste it into `src/scripts/sketches`, making sure to name it exactly the same as the still image that will represent it in the gallery. As you can see, all of the p5.js functions are safely namespaced with `p.` in this template.
 2. Copy your sketch's global variables into the "Initialize variables" section. The copy the body of your `setup`, `draw` and other p5.js built-in functions into the namespaced versions of them in the template (i.e. copy the body of your `setup()` function into `p.setup()`). If you are using a p5 function that isn't in the template, you can add it, just make sure to namespace it too.
 3. If your editor has an eslint plugin, the linter should be hollering right about now about a bunch of undefined variables related to p5. For each one of this, add a `p.` namespace before it.
@@ -86,20 +86,16 @@ git push origin master
 
 Once you've done all that you should be good to go. If you want to know why the heck you need to do this, read "The Deets," below.
 
-##### The Deets
+#### The Deets
 By default, all p5.js functions are in the global namespace (i.e. bound to the window object). This means you can run into conflicts with other libraries and other global variables.
 
 To avoid trouble with this issue, I've set this starter up to rely on the "instance mode" of p5.js. In "instance mode", all p5 functions are bound up in a single variable which can be used as a namespace. [Here](https://p5js.org/examples/instance-mode-instantiation.html) is an example of this kind of sketch on the p5.js site. As you can see, the [sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) you need to use to add a new p5.js sketch to the gallery follows this same pattern. Then, the p5 instance is instantiated in [this wrapper component](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/components/sketchWrapper.jsx).
 
 For more information about instance mode, check out the [p5.js docs on it](https://p5js.org/reference/#/p5/p5), or even better, [watch this](https://www.youtube.com/watch?v=Su792jEauZg&feature=youtu.be).
 
+### The Gallery
 
-
-
-
-#### The Gallery
-
-##### How to a p5.js work to the Gallery
+#### How to Add a p5.js Work to the Gallery
 
 Make sure to read the `How to Prepare Your p5.js Sketch for This Site` section before proceeding.
 
@@ -115,21 +111,21 @@ Place the sketch in the `src/scripts/sketches` directory.
 
 The title of the artwork that displays when hovering on an item in the gallery is automatically derived from the image filename with [this function](https://github.com/doubledherin/gatsby-p5-starter/blob/a6fed6a7953147580f602268173c91994d8ffe09/src/pages/gallery.jsx#L53).
 
-##### How to Add a Still Image to the Gallery (for non-p5.js works)
+#### How to Add a Still Image to the Gallery (for non-p5.js works)
 The benefit of using this starter is that it's easy to add p5.js works to the gallery, but if you just want to add a still image, you can do that too -- just add the image to `images/gallery` and make sure not to put it in the `/p5` subdirectory.
 
-#### The Home Page Sketch
+### The Home Page
 To change which p5.js sketch appears on the home page, change [this import](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/index.jsx#L5) to point to the sketch file you want on the homepage.
 
-#### The About Page
+### The About Page
 Replace [this image](https://github.com/doubledherin/gatsby-p5-starter/tree/master/src/images/about) with yours.
 
 To move the image elsewhere on the page, put [this line](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/about.jsx#L22) where you'd like the image to appear within the content.
 
-#### The Content Page
+### The Content Page
 Simply replace the static content found [here](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/contact.jsx#L10-L11).
 
-#### Add or Remove Entire Pages
+### Add or Remove Entire Pages
 One of the nice things about Gatsby is that pages are generated automatically if they live in the `pages/` directory. So to create a new page, simply add a new .jsx file to that directory.
 
 To add the new page to the header navigation list, add a new `Navlink` item for it [here](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/components/layout/header/index.jsx#L35-L38).
