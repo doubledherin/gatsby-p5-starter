@@ -78,10 +78,30 @@ git push origin master
 
 #### How to Prepare Your p5.js Sketch for This Site
 
+##### TL;DR
+1. Copy [this sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) and paste it into `src/scripts/sketches`, making sure to name it exactly the same as the still image that will represent it in the gallery. As you can see, all of the p5.js functions are safely namespaced with `p.` in this template.
+2. Copy your sketch's global variables into the "Initialize variables" section. The copy the body of your `setup`, `draw` and other p5.js built-in functions into the namespaced versions of them in the template (i.e. copy the body of your `setup()` function into `p.setup()`). If you are using a p5 function that isn't in the template, you can add it, just make sure to namespace it too.
+3. If your editor has an eslint plugin, the linter should be hollering right about now about a bunch of undefined variables related to p5. For each one of this, add a `p.` namespace before it.
+4. If you're using a p5 function or class that's already namespaced with `p5`, such as `p5.Vector`, uncomment [this line](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js#L3) in the template.
+
+Once you've done all that you should be good to go. If you want to know why the heck you need to do this, read "The Deets," below.
+
+##### The Deets
+By default, all p5.js functions are in the global namespace (i.e. bound to the window object). This means you can run into conflicts with other libraries and other global variables.
+
+To avoid trouble with this issue, I've set this starter up to rely on the "instance mode" of p5.js. In "instance mode", all p5 functions are bound up in a single variable which can be used as a namespace. [Here](https://p5js.org/examples/instance-mode-instantiation.html) is an example of this kind of sketch on the p5.js site. As you can see, the [sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) you need to use to add a new p5.js sketch to the gallery follows this same pattern. Then, the p5 instance is instantiated in [this wrapper component](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/components/sketchWrapper.jsx).
+
+For more information about instance mode, check out the [p5.js docs on it](https://p5js.org/reference/#/p5/p5), or even better, [watch this](https://www.youtube.com/watch?v=Su792jEauZg&feature=youtu.be).
+
+
+
+
 
 #### The Gallery
 
 ##### How to a p5.js work to the Gallery
+
+Make sure to read the `How to Prepare Your p5.js Sketch for This Site` section before proceeding.
 
 To add a p5.js work to the gallery, you need to add 2 things to your repo:
 1. The still image for the Gallery page
