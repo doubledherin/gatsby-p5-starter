@@ -13,7 +13,6 @@ const About = ({ data }) => {
     <Layout>
       <div className="about-content-container">
         <h1>About the Gallery</h1>
-        <p>Most works are interactive via click and drag. Read the p5.js <a href="https://github.com/doubledherin/gatsby-p5-starter/tree/master/src/scripts/sketches" target="_blank" rel="noreferrer">scripts</a> to know all of the details on how to interact.</p>
         <p>Most works are interactive via click and drag. Read the p5.js <a href="https://github.com/doubledherin/gatsby-p5-starter/tree/master/src/scripts/sketches" target="_blank" rel="noreferrer" >scripts</a> to know all of the details on how to interact.</p>
         <p>To download a snapshot of a work, hit the &lsquo;s&rsquo; key.</p>
         <p>Licensing note: Except for &ldquo;Perlin Noise Flower,&rdquo; which is mine, the works displayed in the gallery are taken from a book called <a href="https://benedikt-gross.de/projects/generative-design-visualize-program-create-with-javascript-in-p5-js" target="_blank" rel="noreferrer">Generative Design</a> and have been slightly modified, mostly for technical reasons. This is fair use according to the works&rsquo; Apache licenses, which are included in the works&rsquo; scripts in the codebase.</p>
