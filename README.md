@@ -7,10 +7,11 @@
   Gatsby p5.js Starter
 </h1>
 
-This is ✏ ***WIP*** a Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
+This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
 
 ## TODO
 - [ ] Add instructions on adding your own p5.js sketch
+- [ ] Add tests that all gallery images have sketches and all sketches have gallery images
 
 ## ✨ Features
 - [gatsby](https://www.gatsbyjs.org/)
@@ -73,6 +74,47 @@ Push your local `master` branch to the remote:
 ```sh
 git push origin master
 ```
+### 4. Swap in your own content.
+
+#### How to Prepare Your p5.js Sketch for This Site
+
+
+#### The Gallery
+
+##### How to a p5.js work to the Gallery
+
+To add a p5.js work to the gallery, you need to add 2 things to your repo:
+1. The still image for the Gallery page
+2. The p5.js file itself (called a "sketch")
+
+*Both the image and the p5.js sketch need to have the same filename.* For example, if the name of your sketch is "New World Order," the image should be called `new-world-order.png` and the sketch should be called `new-world-order.js`.
+
+Place the image in the `src/images/gallery/p5/` directory.
+
+Place the sketch in the `src/scripts/sketches` directory.
+
+The title of the artwork that displays when hovering on an item in the gallery is automatically derived from the image filename with [this function](https://github.com/doubledherin/gatsby-p5-starter/blob/a6fed6a7953147580f602268173c91994d8ffe09/src/pages/gallery.jsx#L53).
+
+##### How to Add a Still Image to the Gallery (for non-p5.js works)
+The benefit of using this starter is that it's easy to add p5.js works to the gallery, but if you just want to add a still image, you can do that too -- just add the image to `images/gallery` and make sure not to put it in the `/p5` subdirectory.
+
+#### The Home Page Sketch
+To change which p5.js sketch appears on the home page, change [this import](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/index.jsx#L5) to point to the sketch file you want on the homepage.
+
+#### The About Page
+Replace [this image](https://github.com/doubledherin/gatsby-p5-starter/tree/master/src/images/about) with yours.
+
+To move the image elsewhere on the page, put [this line](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/about.jsx#L22) where you'd like the image to appear within the content.
+
+#### The Content Page
+Simply replace the static content found [here](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/contact.jsx#L10-L11).
+
+#### Add or Remove Entire Pages
+One of the nice things about Gatsby is that pages are generated automatically if they live in the `pages/` directory. So to create a new page, simply add a new .jsx file to that directory.
+
+To add the new page to the header navigation list, add a new `Navlink` item for it [here](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/components/layout/header/index.jsx#L35-L38).
+
+To make sure the new header nav item animates nicely in mobile like the others, make sure it is accounted for [here](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/styles/components/layout/header/_media.scss#L65-L75). Each nav item should have an `&:nth-of-type(<n>)` entry, and the `transition-delay` should be incremented by `0.1s` for each successive item.
 
 ## 💫 Deployment
 This starter has instructions on deployment to Heroku, but if you're interested in hosting your  site somewhere else, there are plenty of options; check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
@@ -104,8 +146,6 @@ That should be all you need, but more information on deploying to Heroku can be 
 ### Typography
 This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) with the Bootstrap theme. To choose a different theme or to customize your own theme, follow [these Typography.js docs](http://kyleamathews.github.io/typography.js/) or these [Gatbsy-Typography ones](https://www.gatsbyjs.org/docs/typography-js/).
 
-### Landing Page
-TO DO
 
 ### Gallery Page
 The images in the Gallery are automatically optimized for fluid responsive rendering using the `gatsby-image`, `gatsby-plugin-sharp`, and `gatsby-transformer-sharp`. They are dynamically rendered via GraphQL queries enabled by the `gatsby-source-filesystem` plugin.
