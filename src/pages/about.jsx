@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import PropTypes from 'prop-types'
 import Img from "gatsby-image/withIEPolyfill"
@@ -15,7 +15,7 @@ const About = ({ data }) => {
         <h1>About the Gallery</h1>
         <p>Most works are interactive via click and drag. For &ldquo;Kaleidoscopia,&rdquo;, change the line color by hitting 1, 2, or 3. Read the p5.js <a href="https://github.com/doubledherin/gatsby-p5-starter/tree/master/src/scripts/sketches" target="_blank" rel="noreferrer" >scripts</a> to know all of the details on how to interact.</p>
         <p>To download a snapshot of a work, hit the &lsquo;s&rsquo; key.</p>
-        <p>Licensing note: Except for &ldquo;Perlin Noise Flower,&rdquo; which is mine, the works displayed in the gallery are taken from a book called <a href="https://benedikt-gross.de/projects/generative-design-visualize-program-create-with-javascript-in-p5-js" target="_blank" rel="noreferrer">Generative Design</a> and have been slightly modified, mostly for technical reasons. This is fair use according to the works&rsquo; Apache licenses, which are included in the works&rsquo; scripts in the codebase.</p>
+        <p>Licensing note: Except for &ldquo;<Link to="http://localhost:8000/p5/perlin-noise-flower/" target="_blank" rel="noreferrer">Perlin Noise Flower</Link>,&rdquo; which is mine, the works displayed in the gallery are taken from a book called <a href="https://benedikt-gross.de/projects/generative-design-visualize-program-create-with-javascript-in-p5-js" target="_blank" rel="noreferrer">Generative Design</a> and have been slightly modified, mostly for technical reasons. This is fair use according to the works&rsquo; Apache licenses, which are included in the works&rsquo; scripts in the codebase.</p>
         <h1>About This Site</h1>
         <p>This site was created using <a href="https://github.com/doubledherin/gatsby-p5-starter" target="_blank" rel="noreferrer">this Gatsby starter</a>, which I built so that it&rsquo;s easy to create and deploy a snazzy responsive gallery website that features p5.js works. You can duplicate this site for your own p5.js works! To learn how check out the <a href="https://github.com/doubledherin/gatsby-p5-starter/blob/master/README.md" target="_blank" rel="noreferrer">readme of my starter</a>.</p>
         <h1>About Me</h1>
