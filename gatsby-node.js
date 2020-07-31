@@ -22,7 +22,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === "ImageSharp") {
     const { createNodeField } = actions
     const fileNode = getNode(node.parent)
-    if (fileNode.relativePath.startsWith("images/gallery")) {
+    if (fileNode.relativePath.startsWith("static/images/gallery")) {
       const slug = createFilePath({ node, getNode, basePath: `pages` }).replace(`/${galleryPathPrefix}`, '')
       createNodeField({
         node,

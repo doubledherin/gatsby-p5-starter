@@ -31,7 +31,7 @@ const About = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: {relativePath: {regex: "/images/about/"}}) {
+    allFile(filter: {relativePath: {regex: "/static/images/about/"}}) {
       nodes {
         id
         childImageSharp {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Navlink from './navlink'
-import logo from "../../../images/logo.png"
+import logo from "../../../static/images/logo.png"
 import "../../../styles/main.scss"
 
 function Header() {

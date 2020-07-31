@@ -66,7 +66,7 @@ function deriveSlug(relativePath) {
 
 export const query = graphql`
   query {
-    allFile(filter: {relativePath: {regex: "/^images\/gallery/"}}) {
+    allFile(filter: {relativePath: {regex: "/^static\/images\/gallery/"}}) {
       nodes {
         id
         childImageSharp {

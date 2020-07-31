@@ -107,14 +107,14 @@ To add a p5.js work to the gallery, you need to add 2 things to your repo:
 
 *Both the image and the p5.js sketch need to have the same filename.* For example, if the name of your sketch is "New World Order," the image should be called `new-world-order.png` and the sketch should be called `new-world-order.js`.
 
-Place the image in the `src/images/gallery/p5/` directory.
+Place the image in the `src/static/images/gallery/p5/` directory.
 
 Place the sketch in the `src/scripts/sketches` directory.
 
 The title of the artwork that displays when hovering on an item in the gallery is automatically derived from the image filename with [this function](https://github.com/doubledherin/gatsby-p5-starter/blob/a6fed6a7953147580f602268173c91994d8ffe09/src/pages/gallery.jsx#L53).
 
 #### How to Add a Still Image to the Gallery (for non-p5.js works)
-The benefit of using this starter is that it's easy to add p5.js works to the gallery, but if you just want to add a still image, you can do that too -- just add the image to `images/gallery` and make sure not to put it in the `/p5` subdirectory.
+The benefit of using this starter is that it's easy to add p5.js works to the gallery, but if you just want to add a still image, you can do that too -- just add the image to `static/images/gallery` and make sure not to put it in the `/p5` subdirectory.
 
 ### The Home Page
 To change which p5.js sketch appears on the home page, change [this import](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/pages/index.jsx#L5) to point to the sketch file you want on the homepage.
@@ -168,7 +168,7 @@ This starter uses [Typography.js](http://kyleamathews.github.io/typography.js/) 
 ### Gallery Page
 The images in the Gallery are automatically optimized for fluid responsive rendering using the `gatsby-image`, `gatsby-plugin-sharp`, and `gatsby-transformer-sharp`. They are dynamically rendered via GraphQL queries enabled by the `gatsby-source-filesystem` plugin.
 
-Any image in `src/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
+Any image in `src/static/images/gallery` will appear on the Gallery page, and the text for the image is based on the filename. So if you want the text for your image to be "P5 Is Awesome", the filename of the image needs to be `p5-is-awesome.<file extension>`.
 
 Clicking on any image in the gallery will redirect you to a page with a full-screen representation of the gallery item. The pages for each gallery item are generated dynamically in the gatsby-node.js config file. For more information on how this works, see the [Gatsby tutorial of programatically creating pages](https://www.gatsbyjs.org/tutorial/part-seven/).
 

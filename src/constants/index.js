@@ -1,4 +1,4 @@
-const galleryPathPrefix = "images/gallery"
+const galleryPathPrefix = "static/images/gallery"
 
 module.exports = {
   galleryPathPrefix
