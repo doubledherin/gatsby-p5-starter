@@ -15,13 +15,13 @@ In this README, I've written detailed instructions on how to use this starter. I
 
 ## TODO
 - [x] Add instructions on adding your own p5.js sketch
+- [x] Refactor SketchWrapper using React Hooks API
 - [ ] Add tests that all gallery images have sketches and all sketches have gallery images
 
 ## ✨ Features
-- [gatsby](https://www.gatsbyjs.org/)
+- [gatsby](https://www.gatsbyjs.org/), obviously!
+- React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- I've [written my own wrapper](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/components/sketchWrapper.jsx) for this starter.
 - responsive css-grid gallery with [Sass](https://sass-lang.com/)
-- React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- I've written my own wrapper for this starter.
-- [Typography.js](http://kyleamathews.github.io/typography.js/)
 
 ## 🚀 Getting Started
 
