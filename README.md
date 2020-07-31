@@ -7,7 +7,11 @@
   Gatsby p5.js Starter
 </h1>
 
-This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/
+This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/.
+
+I created it because I love working in p5.js and wanted a way to display my sketches, but I couldn't find any pre-existing scaffolding to do so. So I decided to create my own scaffolding, as a Gatsby starter, so that others can easily show off their awesome sketches.
+
+In this README, I've written detailed instructions on how to use this starter. If anything is not working for you, please create an issue, and I'll get right on it.
 
 ## TODO
 - [x] Add instructions on adding your own p5.js sketch
@@ -16,7 +20,7 @@ This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. Vie
 ## ✨ Features
 - [gatsby](https://www.gatsbyjs.org/)
 - responsive css-grid gallery with [Sass](https://sass-lang.com/)
-- React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- no need.
+- React integration for [p5.js](https://p5js.org/) sketches. Note that this does not use `react-p5-wrapper` -- I've written my own wrapper for this starter.
 - [Typography.js](http://kyleamathews.github.io/typography.js/)
 
 ## 🚀 Getting Started
@@ -37,9 +41,7 @@ If you already have gatsby-cli, and you're seeing an error related to a missing 
 
 ### 1. Create a Gatsby site.
 
-*Don't just clone this repo.* 
-
-Instead, use the Gatsby CLI to create a new site, specifying the starter project.
+Don't just clone this repo. Instead, use the Gatsby CLI to create a new site, specifying the starter project.
 
 ```sh
 gatsby new <your-project-name> https://github.com/doubledherin/gatsby-p5-starter.git
@@ -76,10 +78,10 @@ git push origin master
 ```
 ## Add Your Own Content
 
-### How to Prepare Your p5.js Sketch for This Site
+### How to Prepare a p5.js Sketch to be Added to Your Gallery
 
 #### TL;DR
-1. Copy [this sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) and paste it into `src/scripts/sketches`, making sure to name it exactly the same as the still image that will represent it in the gallery. As you can see, all of the p5.js functions are safely namespaced with `p.` in this template.
+1. Copy [this sketch template](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js) and paste it into `src/scripts/sketches`, making sure to name it exactly the same as the still image that will represent it in the gallery. (As you can see, all of the p5.js functions are namespaced with `p.` in this template so as not to dilute the global namespace.)
 2. Copy your sketch's global variables into the "Initialize variables" section. The copy the body of your `setup`, `draw` and other p5.js built-in functions into the namespaced versions of them in the template (i.e. copy the body of your `setup()` function into `p.setup()`). If you are using a p5 function that isn't in the template, you can add it, just make sure to namespace it too.
 3. If your editor has an eslint plugin, the linter should be hollering right about now about a bunch of undefined variables related to p5. For each one of this, add a `p.` namespace before it.
 4. If you're using a p5 function or class that's already namespaced with `p5`, such as `p5.Vector`, uncomment [this line](https://github.com/doubledherin/gatsby-p5-starter/blob/master/src/templates/sketchTemplate.js#L3) in the template.
