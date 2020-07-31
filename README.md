@@ -9,7 +9,7 @@
 
 This is a ✏✏✏ WIP ✏✏✏ Gatsby starter that integrates with p5.js. View a live version of it at https://gatsby-p5-gallery-starter.herokuapp.com/.
 
-I created it because I love working in p5.js and wanted a way to display my sketches, but I couldn't find any pre-existing scaffolding to do so. So I decided to create my own scaffolding, as a Gatsby starter, so that others can easily show off their awesome sketches.
+I created it because I love working in p5.js and wanted a way to display my sketches, but I couldn't find any pre-existing scaffolding to do so in the [Gatsby Starter Library](https://www.gatsbyjs.org/starters/?v=2). So I decided to create my own, so that others can easily show off their awesome sketches.
 
 In this README, I've written detailed instructions on how to use this starter. If anything is not working for you, please create an issue, and I'll get right on it.
 
