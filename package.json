@@ -46,7 +46,7 @@
     "gatsby-plugin-typography": "^2.5.0",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-sharp": "^2.5.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "p5": "^0.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",
