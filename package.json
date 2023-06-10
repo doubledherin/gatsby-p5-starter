@@ -39,7 +39,7 @@
     "deploy-gh": "gatsby clean && gatsby build && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.24.11",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-sass": "^2.3.1",
     "gatsby-plugin-sharp": "^2.6.0",
